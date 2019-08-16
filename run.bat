@@ -1,0 +1,1 @@
+java -jar com.element-1.0-SNAPSHOT.jar log.txt

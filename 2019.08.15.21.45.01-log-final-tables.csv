@@ -1,0 +1,767 @@
+
++++++++++++++++++++++++++++++++++++++
+14:06:09.430 , INFO  ,COMPARING TABLES: fdb_core_asset_custom_field (FiloDB) and core.asset_custom_field (Snowflake)
+WARN  2019-08-15 14:06:16;937 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:06:22.221 , INFO  ,METADATA CHECK STARTED
+14:06:22.225 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:06:22;797 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:06:36.999 , INFO  ,Total FiloDB count gathered by COUNT(*) is 10621674
+14:06:37.549 , INFO  ,Total Snowflake count gathered by COUNT(*) is 10621074
+================
+14:06:37.549 , ERROR ,ERROR: Rows count is not equal at table fdb_core_asset_custom_field (10621674) and core.asset_custom_field (10621074)
+================
+14:06:37.550 , INFO  ,Preliminary execution time: 00:00:34.413
+14:06:37.550 , INFO  ,Number of table(s) left: 46
+
++++++++++++++++++++++++++++++++++++++
+14:06:37.550 , INFO  ,COMPARING TABLES: fdb_core_asset_info (FiloDB) and core.asset_info (Snowflake)
+WARN  2019-08-15 14:06:37;642 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:06:41.085 , INFO  ,METADATA CHECK STARTED
+14:06:41.087 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:06:41;120 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:06:48.238 , INFO  ,Total FiloDB count gathered by COUNT(*) is 11025596
+14:06:48.781 , INFO  ,Total Snowflake count gathered by COUNT(*) is 11021823
+================
+14:06:48.781 , ERROR ,ERROR: Rows count is not equal at table fdb_core_asset_info (11025596) and core.asset_info (11021823)
+================
+14:06:48.781 , INFO  ,Preliminary execution time: 00:00:45.645
+14:06:48.781 , INFO  ,Number of table(s) left: 45
+
++++++++++++++++++++++++++++++++++++++
+14:06:48.782 , INFO  ,COMPARING TABLES: fdb_core_asset_info_ext1 (FiloDB) and core.asset_info_ext1 (Snowflake)
+WARN  2019-08-15 14:06:48;824 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:06:51.631 , INFO  ,METADATA CHECK STARTED
+14:06:51.632 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:06:51;673 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:06:58.737 , INFO  ,Total FiloDB count gathered by COUNT(*) is 11023334
+14:06:59.094 , INFO  ,Total Snowflake count gathered by COUNT(*) is 11019546
+================
+14:06:59.095 , ERROR ,ERROR: Rows count is not equal at table fdb_core_asset_info_ext1 (11023334) and core.asset_info_ext1 (11019546)
+================
+14:06:59.095 , INFO  ,Preliminary execution time: 00:00:55.959
+14:06:59.095 , INFO  ,Number of table(s) left: 44
+
++++++++++++++++++++++++++++++++++++++
+14:06:59.095 , INFO  ,COMPARING TABLES: fdb_core_asset_info_ext2 (FiloDB) and core.asset_info_ext2 (Snowflake)
+WARN  2019-08-15 14:06:59;134 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:07:02.224 , INFO  ,METADATA CHECK STARTED
+14:07:02.225 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:07:02;247 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:07:09.105 , INFO  ,Total FiloDB count gathered by COUNT(*) is 11023316
+14:07:10.171 , INFO  ,Total Snowflake count gathered by COUNT(*) is 11019504
+================
+14:07:10.171 , ERROR ,ERROR: Rows count is not equal at table fdb_core_asset_info_ext2 (11023316) and core.asset_info_ext2 (11019504)
+================
+14:07:10.171 , INFO  ,Preliminary execution time: 00:01:07.035
+14:07:10.171 , INFO  ,Number of table(s) left: 43
+
++++++++++++++++++++++++++++++++++++++
+14:07:10.171 , INFO  ,COMPARING TABLES: fdb_core_client_asset_header (FiloDB) and core.client_asset_header (Snowflake)
+WARN  2019-08-15 14:07:10;199 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:07:11.976 , INFO  ,METADATA CHECK STARTED
+14:07:11.976 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:07:11;993 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:07:19.248 , INFO  ,Total FiloDB count gathered by COUNT(*) is 53381
+14:07:19.753 , INFO  ,Total Snowflake count gathered by COUNT(*) is 53381
+WARN  2019-08-15 14:07:20;517 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:07:49.107 , INFO  ,CHECKSUM for column data31_nm is the same: 1032; 1032 - OK!!!
+14:07:49.107 , INFO  ,CHECKSUM for column cli_no is the same: 309146; 309146 - OK!!!
+14:07:49.107 , INFO  ,CHECKSUM for column data14_nm is the same: 1680; 1680 - OK!!!
+14:07:49.107 , INFO  ,CHECKSUM for column data12_nm is the same: 2550; 2550 - OK!!!
+14:07:49.107 , INFO  ,CHECKSUM for column data21_nm is the same: 55157; 55157 - OK!!!
+14:07:49.108 , INFO  ,CHECKSUM for column data19_nm is the same: 701; 701 - OK!!!
+14:07:49.108 , INFO  ,CHECKSUM for column data30_nm is the same: 1443; 1443 - OK!!!
+14:07:49.108 , INFO  ,CHECKSUM for column corp_cd is the same: 106762; 106762 - OK!!!
+14:07:49.108 , INFO  ,CHECKSUM for column data03_nm is the same: 42861; 42861 - OK!!!
+14:07:49.108 , INFO  ,CHECKSUM for column data11_nm is the same: 3861; 3861 - OK!!!
+14:07:49.108 , INFO  ,CHECKSUM for column data18_nm is the same: 1591; 1591 - OK!!!
+14:07:49.108 , INFO  ,CHECKSUM for column data13_nm is the same: 2432; 2432 - OK!!!
+14:07:49.108 , INFO  ,CHECKSUM for column data29_nm is the same: 1699; 1699 - OK!!!
+14:07:49.109 , INFO  ,CHECKSUM for column data15_nm is the same: 1666; 1666 - OK!!!
+14:07:49.109 , INFO  ,CHECKSUM for column data17_nm is the same: 5512; 5512 - OK!!!
+14:07:49.109 , INFO  ,CHECKSUM for column data16_nm is the same: 90405; 90405 - OK!!!
+14:07:49.109 , INFO  ,CHECKSUM for column data20_nm is the same: 401; 401 - OK!!!
+14:07:49.109 , INFO  ,CHECKSUM for column custom_bkdn is the same: 636943; 636943 - OK!!!
+14:07:49.109 , INFO  ,CHECKSUM for column data06_nm is the same: 25542; 25542 - OK!!!
+14:07:49.110 , INFO  ,Preliminary execution time: 00:01:45.974
+14:07:49.110 , INFO  ,Number of table(s) left: 42
+
++++++++++++++++++++++++++++++++++++++
+14:07:49.110 , INFO  ,COMPARING TABLES: fdb_core_client_breakdown (FiloDB) and core.client_breakdown (Snowflake)
+WARN  2019-08-15 14:07:49;139 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:07:50.155 , INFO  ,METADATA CHECK STARTED
+14:07:50.155 , INFO  ,In source table there are additional columns: deleteflag
+14:07:50.155 , INFO  ,In snowflake table there are additional columns: 
+14:07:50.156 , INFO  ,Preliminary execution time: 00:01:47.019
+14:07:50.156 , INFO  ,Number of table(s) left: 41
+
++++++++++++++++++++++++++++++++++++++
+14:07:50.156 , INFO  ,COMPARING TABLES: fdb_core_internal_contact_info (FiloDB) and core.internal_contact_info (Snowflake)
+WARN  2019-08-15 14:07:50;179 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:07:51.023 , INFO  ,METADATA CHECK STARTED
+14:07:51.024 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:07:51;039 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:07:58.054 , INFO  ,Total FiloDB count gathered by COUNT(*) is 278655
+14:07:58.875 , INFO  ,Total Snowflake count gathered by COUNT(*) is 278445
+================
+14:07:58.876 , ERROR ,ERROR: Rows count is not equal at table fdb_core_internal_contact_info (278655) and core.internal_contact_info (278445)
+================
+14:07:58.876 , INFO  ,Preliminary execution time: 00:01:55.740
+14:07:58.876 , INFO  ,Number of table(s) left: 40
+
++++++++++++++++++++++++++++++++++++++
+14:07:58.876 , INFO  ,COMPARING TABLES: fdb_core_person (FiloDB) and core.person (Snowflake)
+WARN  2019-08-15 14:07:58;908 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:08:01.431 , INFO  ,METADATA CHECK STARTED
+14:08:01.431 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:08:01;448 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:08:08.073 , INFO  ,Total FiloDB count gathered by COUNT(*) is 4184092
+14:08:08.616 , INFO  ,Total Snowflake count gathered by COUNT(*) is 4183400
+================
+14:08:08.616 , ERROR ,ERROR: Rows count is not equal at table fdb_core_person (4184092) and core.person (4183400)
+================
+14:08:08.617 , INFO  ,Preliminary execution time: 00:02:05.480
+14:08:08.617 , INFO  ,Number of table(s) left: 39
+
++++++++++++++++++++++++++++++++++++++
+14:08:08.617 , INFO  ,COMPARING TABLES: fdb_core_person_custom_field (FiloDB) and core.person_custom_field (Snowflake)
+WARN  2019-08-15 14:08:08;645 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:08:09.822 , INFO  ,METADATA CHECK STARTED
+14:08:09.823 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:08:09;837 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:08:16.130 , INFO  ,Total FiloDB count gathered by COUNT(*) is 4053212
+14:08:16.448 , INFO  ,Total Snowflake count gathered by COUNT(*) is 4052742
+================
+14:08:16.448 , ERROR ,ERROR: Rows count is not equal at table fdb_core_person_custom_field (4053212) and core.person_custom_field (4052742)
+================
+14:08:16.448 , INFO  ,Preliminary execution time: 00:02:13.312
+14:08:16.448 , INFO  ,Number of table(s) left: 38
+
++++++++++++++++++++++++++++++++++++++
+14:08:16.448 , INFO  ,COMPARING TABLES: fdb_core_ref_date_range (FiloDB) and ref_core.ref_date_range (Snowflake)
+WARN  2019-08-15 14:08:16;480 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:08:17.117 , INFO  ,METADATA CHECK STARTED
+14:08:17.117 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:08:17;131 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:08:23.524 , INFO  ,Total FiloDB count gathered by COUNT(*) is 36
+14:08:24.178 , INFO  ,Total Snowflake count gathered by COUNT(*) is 36
+WARN  2019-08-15 14:08:24;250 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:08:30.979 , INFO  ,CHECKSUM for column date_range is the same: 577; 577 - OK!!!
+14:08:30.979 , INFO  ,CHECKSUM for column id is the same: 658; 658 - OK!!!
+14:08:30.979 , INFO  ,CHECKSUM for column ref_partition is the same: 504; 504 - OK!!!
+14:08:30.980 , INFO  ,Preliminary execution time: 00:02:27.844
+14:08:30.980 , INFO  ,Number of table(s) left: 37
+
++++++++++++++++++++++++++++++++++++++
+14:08:30.980 , INFO  ,COMPARING TABLES: fdb_core_service_card (FiloDB) and core.service_card (Snowflake)
+WARN  2019-08-15 14:08:31;012 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:08:32.274 , INFO  ,METADATA CHECK STARTED
+14:08:32.274 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:08:32;288 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:08:38.980 , INFO  ,Total FiloDB count gathered by COUNT(*) is 19733272
+14:08:39.571 , INFO  ,Total Snowflake count gathered by COUNT(*) is 15969354
+================
+14:08:39.572 , ERROR ,ERROR: Rows count is not equal at table fdb_core_service_card (19733272) and core.service_card (15969354)
+================
+14:08:39.572 , INFO  ,Preliminary execution time: 00:02:36.436
+14:08:39.572 , INFO  ,Number of table(s) left: 36
+
++++++++++++++++++++++++++++++++++++++
+14:08:39.572 , INFO  ,COMPARING TABLES: fdb_ref_core_ref_lessor (FiloDB) and ref_core.ref_lessor (Snowflake)
+WARN  2019-08-15 14:08:39;606 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:08:40.822 , INFO  ,METADATA CHECK STARTED
+14:08:40.822 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:08:40;838 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:08:46.894 , INFO  ,Total FiloDB count gathered by COUNT(*) is 67
+14:08:47.460 , INFO  ,Total Snowflake count gathered by COUNT(*) is 67
+WARN  2019-08-15 14:08:47;567 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:08:54.572 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 99866896732427.0000; 99866896732427 - OK!!!
+14:08:54.572 , INFO  ,CHECKSUM for column src_extract_dt is the same: 99866895660000.0; 99866895660000 - OK!!!
+14:08:54.572 , INFO  ,CHECKSUM for column lessor_addr_line3 is the same: 67; 67 - OK!!!
+14:08:54.572 , INFO  ,CHECKSUM for column lessor_nm is the same: 1435; 1435 - OK!!!
+14:08:54.572 , INFO  ,CHECKSUM for column corp_cd is the same: 134; 134 - OK!!!
+14:08:54.572 , INFO  ,CHECKSUM for column lessor_addr_line1 is the same: 1244; 1244 - OK!!!
+14:08:54.572 , INFO  ,CHECKSUM for column lessor_no is the same: 134; 134 - OK!!!
+14:08:54.572 , INFO  ,CHECKSUM for column lessor_setup_dt is the same: 94824971584101.0000; 94824971584101 - OK!!!
+14:08:54.572 , INFO  ,CHECKSUM for column lessor_city_nm is the same: 444; 444 - OK!!!
+14:08:54.572 , INFO  ,CHECKSUM for column lessor_addr_line2 is the same: 75; 75 - OK!!!
+14:08:54.572 , INFO  ,CHECKSUM for column lessor_postal_cd is the same: 475; 475 - OK!!!
+14:08:54.572 , INFO  ,CHECKSUM for column ref_partition is the same: 670; 670 - OK!!!
+14:08:54.572 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 99866896763057.0000; 99866896763057 - OK!!!
+14:08:54.572 , INFO  ,Preliminary execution time: 00:02:51.436
+14:08:54.572 , INFO  ,Number of table(s) left: 35
+
++++++++++++++++++++++++++++++++++++++
+14:08:54.573 , INFO  ,COMPARING TABLES: fdb_ref_core_state_city_location_code_info (FiloDB) and ref_core.ref_state_city_location_code_info (Snowflake)
+WARN  2019-08-15 14:08:54;600 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:08:55.446 , INFO  ,METADATA CHECK STARTED
+14:08:55.446 , INFO  ,In source table there are additional columns: deleteflag
+14:08:55.446 , INFO  ,In snowflake table there are additional columns: 
+14:08:55.446 , INFO  ,Preliminary execution time: 00:02:52.310
+14:08:55.446 , INFO  ,Number of table(s) left: 34
+
++++++++++++++++++++++++++++++++++++++
+14:08:55.446 , INFO  ,COMPARING TABLES: fdb_txn_bill_other_charge_daily (FiloDB) and txn_bill.other_charge_daily (Snowflake)
+WARN  2019-08-15 14:08:55;470 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:08:58.867 , INFO  ,METADATA CHECK STARTED
+14:08:58.867 , INFO  ,In source table there are additional columns: deleteflag
+14:08:58.867 , INFO  ,In snowflake table there are additional columns: 
+14:08:58.867 , INFO  ,Preliminary execution time: 00:02:55.731
+14:08:58.868 , INFO  ,Number of table(s) left: 33
+
++++++++++++++++++++++++++++++++++++++
+14:08:58.868 , INFO  ,COMPARING TABLES: fdb_txn_inv_asset_factless_fact_info (FiloDB) and txn_inv.asset_factless_fact_info (Snowflake)
+WARN  2019-08-15 14:08:58;892 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:08:59.393 , INFO  ,METADATA CHECK STARTED
+14:08:59.393 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:08:59;407 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:09:06.001 , INFO  ,Total FiloDB count gathered by COUNT(*) is 10786681
+14:09:06.566 , INFO  ,Total Snowflake count gathered by COUNT(*) is 10784055
+================
+14:09:06.566 , ERROR ,ERROR: Rows count is not equal at table fdb_txn_inv_asset_factless_fact_info (10786681) and txn_inv.asset_factless_fact_info (10784055)
+================
+14:09:06.566 , INFO  ,Preliminary execution time: 00:03:03.430
+14:09:06.566 , INFO  ,Number of table(s) left: 32
+
++++++++++++++++++++++++++++++++++++++
+14:09:06.566 , INFO  ,COMPARING TABLES: fdb_ref_core_charge_code_report_grouping (FiloDB) and ref_core.ref_charge_code_report_grouping (Snowflake)
+WARN  2019-08-15 14:09:06;594 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:09:07.264 , INFO  ,METADATA CHECK STARTED
+14:09:07.264 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:09:07;278 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:09:13.658 , INFO  ,Total FiloDB count gathered by COUNT(*) is 8296
+14:09:14.128 , INFO  ,Total Snowflake count gathered by COUNT(*) is 8296
+WARN  2019-08-15 14:09:14;234 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:09:21.061 , INFO  ,CHECKSUM for column bill_chrg_cd_long_desc is the same: 169794; 169794 - OK!!!
+14:09:21.061 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 11066798164042024.0000; 11066798164042024 - OK!!!
+14:09:21.061 , INFO  ,CHECKSUM for column bill_chrg_cd_ctgy is the same: 54260; 54260 - OK!!!
+14:09:21.061 , INFO  ,CHECKSUM for column bill_chrg_cd_short_desc is the same: 74125; 74125 - OK!!!
+14:09:21.061 , INFO  ,CHECKSUM for column rpt_group_desc is the same: 162785; 162785 - OK!!!
+14:09:21.061 , INFO  ,CHECKSUM for column bill_chrg_cd is the same: 32730; 32730 - OK!!!
+14:09:21.061 , INFO  ,CHECKSUM for column ref_partition is the same: 223992; 223992 - OK!!!
+14:09:21.061 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 1935138068082752.0000; 1935138068082752 - OK!!!
+14:09:21.061 , INFO  ,CHECKSUM for column rpt_group_no is the same: 42449; 42449 - OK!!!
+14:09:21.061 , INFO  ,CHECKSUM for column bill_chrg_cd_ctgy_desc is the same: 108807; 108807 - OK!!!
+14:09:21.062 , INFO  ,Preliminary execution time: 00:03:17.926
+14:09:21.062 , INFO  ,Number of table(s) left: 31
+
++++++++++++++++++++++++++++++++++++++
+14:09:21.062 , INFO  ,COMPARING TABLES: fdb_core_asset_info_ext3 (FiloDB) and core.asset_info_ext3 (Snowflake)
+WARN  2019-08-15 14:09:21;091 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:09:23.432 , INFO  ,METADATA CHECK STARTED
+14:09:23.433 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:09:23;448 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:09:29.940 , INFO  ,Total FiloDB count gathered by COUNT(*) is 11023330
+14:09:30.484 , INFO  ,Total Snowflake count gathered by COUNT(*) is 11019508
+================
+14:09:30.484 , ERROR ,ERROR: Rows count is not equal at table fdb_core_asset_info_ext3 (11023330) and core.asset_info_ext3 (11019508)
+================
+14:09:30.484 , INFO  ,Preliminary execution time: 00:03:27.348
+14:09:30.484 , INFO  ,Number of table(s) left: 30
+
++++++++++++++++++++++++++++++++++++++
+14:09:30.484 , INFO  ,COMPARING TABLES: fdb_core_ref_county_province_location_code (FiloDB) and ref_core.ref_county_province_location_code (Snowflake)
+WARN  2019-08-15 14:09:30;513 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:09:31.373 , INFO  ,METADATA CHECK STARTED
+14:09:31.373 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:09:31;387 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:09:37.646 , INFO  ,Total FiloDB count gathered by COUNT(*) is 3510
+14:09:38.011 , INFO  ,Total Snowflake count gathered by COUNT(*) is 3510
+WARN  2019-08-15 14:09:38;080 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:09:44.985 , INFO  ,CHECKSUM for column cnty_prov_loc_cd is the same: 10587; 10587 - OK!!!
+14:09:44.985 , INFO  ,CHECKSUM for column lang_typ_cd is the same: 3459; 3459 - OK!!!
+14:09:44.986 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 20410; 20410 - OK!!!
+14:09:44.986 , INFO  ,CHECKSUM for column st_loc_cd is the same: 7020; 7020 - OK!!!
+14:09:44.986 , INFO  ,CHECKSUM for column ref_partition is the same: 101790; 101790 - OK!!!
+14:09:44.986 , INFO  ,CHECKSUM for column cnty_prov_nm is the same: 26800; 26800 - OK!!!
+14:09:44.986 , INFO  ,Preliminary execution time: 00:03:41.850
+14:09:44.986 , INFO  ,Number of table(s) left: 29
+
++++++++++++++++++++++++++++++++++++++
+14:09:44.986 , INFO  ,COMPARING TABLES: fdb_ref_core_bill_charge_code (FiloDB) and ref_core.ref_bill_charge_code (Snowflake)
+WARN  2019-08-15 14:09:45;014 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:09:45.856 , INFO  ,METADATA CHECK STARTED
+14:09:45.856 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:09:45;870 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:09:52.189 , INFO  ,Total FiloDB count gathered by COUNT(*) is 1359
+14:09:52.752 , INFO  ,Total Snowflake count gathered by COUNT(*) is 1359
+WARN  2019-08-15 14:09:52;836 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:09:59.788 , INFO  ,CHECKSUM for column bill_chrg_cd_long_desc is the same: 28236; 28236 - OK!!!
+14:09:59.788 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 1632043037072179.0000; 1632043037072179 - OK!!!
+14:09:59.788 , INFO  ,CHECKSUM for column src_extract_dt is the same: 1737365551560000.0; 1737365551560000 - OK!!!
+14:09:59.788 , INFO  ,CHECKSUM for column bill_chrg_cd_short_desc is the same: 11827; 11827 - OK!!!
+14:09:59.788 , INFO  ,CHECKSUM for column lang_typ_cd is the same: 1359; 1359 - OK!!!
+14:09:59.788 , INFO  ,CHECKSUM for column fee_ind is the same: 6532; 6532 - OK!!!
+14:09:59.788 , INFO  ,CHECKSUM for column bill_chrg_cd is the same: 5376; 5376 - OK!!!
+14:09:59.788 , INFO  ,CHECKSUM for column bill_chrg_cd_usage_cd is the same: 1302; 1302 - OK!!!
+14:09:59.789 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 8006; 8006 - OK!!!
+14:09:59.789 , INFO  ,CHECKSUM for column ref_partition is the same: 27180; 27180 - OK!!!
+14:09:59.789 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 268273343746811.0000; 268273343746811 - OK!!!
+14:09:59.789 , INFO  ,Preliminary execution time: 00:03:56.653
+14:09:59.789 , INFO  ,Number of table(s) left: 28
+
++++++++++++++++++++++++++++++++++++++
+14:09:59.789 , INFO  ,COMPARING TABLES: fdb_core_profile_client_breakdown (FiloDB) and core.profile_client_breakdown (Snowflake)
+WARN  2019-08-15 14:09:59;816 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:10:00.689 , INFO  ,METADATA CHECK STARTED
+14:10:00.689 , INFO  ,In source table there are additional columns: deleteflag
+14:10:00.689 , INFO  ,In snowflake table there are additional columns: 
+14:10:00.689 , INFO  ,Preliminary execution time: 00:03:57.553
+14:10:00.689 , INFO  ,Number of table(s) left: 27
+
++++++++++++++++++++++++++++++++++++++
+14:10:00.689 , INFO  ,COMPARING TABLES: fdb_txn_agg_person_asset (FiloDB) and txn_inv.agg_person_asset (Snowflake)
+WARN  2019-08-15 14:10:00;720 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:10:02.432 , INFO  ,METADATA CHECK STARTED
+14:10:02.432 , INFO  ,In source table there are additional columns: 
+14:10:02.432 , INFO  ,In snowflake table there are additional columns: dt_val; amt_val; numeric_val
+14:10:02.432 , INFO  ,Preliminary execution time: 00:03:59.296
+14:10:02.432 , INFO  ,Number of table(s) left: 26
+
++++++++++++++++++++++++++++++++++++++
+14:10:02.432 , INFO  ,COMPARING TABLES: fdb_core_asset_option (FiloDB) and core.asset_option (Snowflake)
+WARN  2019-08-15 14:10:02;457 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:10:06.240 , INFO  ,METADATA CHECK STARTED
+14:10:06.241 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:10:06;257 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:10:12.863 , INFO  ,Total FiloDB count gathered by COUNT(*) is 67610764
+14:10:13.211 , INFO  ,Total Snowflake count gathered by COUNT(*) is 67593434
+================
+14:10:13.211 , ERROR ,ERROR: Rows count is not equal at table fdb_core_asset_option (67610764) and core.asset_option (67593434)
+================
+14:10:13.211 , INFO  ,Preliminary execution time: 00:04:10.075
+14:10:13.211 , INFO  ,Number of table(s) left: 25
+
++++++++++++++++++++++++++++++++++++++
+14:10:13.211 , INFO  ,COMPARING TABLES: fdb_ref_core_tag_type_code (FiloDB) and ref_core.ref_tag_type_code (Snowflake)
+WARN  2019-08-15 14:10:13;238 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:10:14.249 , INFO  ,METADATA CHECK STARTED
+14:10:14.249 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:10:14;263 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:10:20.280 , INFO  ,Total FiloDB count gathered by COUNT(*) is 75
+14:10:20.837 , INFO  ,Total Snowflake count gathered by COUNT(*) is 75
+WARN  2019-08-15 14:10:20;896 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:10:27.918 , INFO  ,CHECKSUM for column tag_typ_cd_short_desc is the same: 919; 919 - OK!!!
+14:10:27.918 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 99521800998867.0000; 99521800998867 - OK!!!
+14:10:27.918 , INFO  ,CHECKSUM for column cd_del_from_source_ind is the same: 450; 450 - OK!!!
+14:10:27.918 , INFO  ,CHECKSUM for column src_extract_dt is the same: 99521800998867.0000; 99521800998867 - OK!!!
+14:10:27.918 , INFO  ,CHECKSUM for column tag_typ_cd is the same: 2775; 2775 - OK!!!
+14:10:27.918 , INFO  ,CHECKSUM for column tag_typ_cd_long_desc is the same: 998; 998 - OK!!!
+14:10:27.918 , INFO  ,CHECKSUM for column ref_partition is the same: 1275; 1275 - OK!!!
+14:10:27.918 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:10:27.918 , INFO  ,CHECKSUM for column dialect_cd is the same: 75; 75 - OK!!!
+14:10:27.918 , INFO  ,Preliminary execution time: 00:04:24.782
+14:10:27.919 , INFO  ,Number of table(s) left: 24
+
++++++++++++++++++++++++++++++++++++++
+14:10:27.919 , INFO  ,COMPARING TABLES: fdb_core_person_asset_history (FiloDB) and core.person_asset_history (Snowflake)
+WARN  2019-08-15 14:10:27;949 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:10:29.005 , INFO  ,METADATA CHECK STARTED
+14:10:29.005 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:10:29;018 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:10:35.509 , INFO  ,Total FiloDB count gathered by COUNT(*) is 9199282
+14:10:36.018 , INFO  ,Total Snowflake count gathered by COUNT(*) is 9193103
+================
+14:10:36.018 , ERROR ,ERROR: Rows count is not equal at table fdb_core_person_asset_history (9199282) and core.person_asset_history (9193103)
+================
+14:10:36.018 , INFO  ,Preliminary execution time: 00:04:32.882
+14:10:36.018 , INFO  ,Number of table(s) left: 23
+
++++++++++++++++++++++++++++++++++++++
+14:10:36.018 , INFO  ,COMPARING TABLES: fdb_txn_bill_new_unit_notice_info (FiloDB) and txn_bill.sold_unit_notice_info (Snowflake)
+WARN  2019-08-15 14:10:36;046 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:10:38.045 , INFO  ,METADATA CHECK STARTED
+14:10:38.046 , INFO  ,In source table there are additional columns: new_unit_notice_typ_long_desc; tot_cap_cost_amt; contract_cd; drvr_addr_line2; new_unit_notice_disclaimer_cd; lien_holder_nm; prev_cli_asset_id; cli_cntct_addr_line1; new_unit_notice_typ_cd; new_unit_notice_desc; drvr_city_nm; cli_cntct_st_prov_abbr; new_unit_notice_eff_dt; mgmt_fee_max_amt; reg_expir_dt; deliv_dt; make_desc; cli_cntct_city_nm; lang_typ_cd; cli_cntct_postcode; veh_mrk_up_down_amt; lse_rt_typ_cd; prev_unit_no; cli_cntct_addr_line2; interim_rent_ind; prev_vin; base_inv_amt; deliv_typ_cd; last_eight_of_vin; thereafter_fee_amt; mgmt_fee_amt; prod_class_cd; cli_cntct_addr_line3; mgmt_fee_flat_rt_ind; cd_del_from_src_ind; drvr_zip_cd; funds_rt; off_road_dt; version_no; new_unit_notice_typ_short_desc; drvr_id; depr_pct; deliv_typ_cd_desc; drvr_addr_line1; ast_del_from_src_ind; ref_partition; prev_cli_no; thereafter_fee_max_amt; init_rntl_dt; init_bill_dt; pref_calc_txt; thereafter_fee_flat_rt_ind; drvr_st_prov_abbr; cli_legal_nm; dialect_cd; mfg_cd; lse_term_mos; cli_po_no
+14:10:38.046 , INFO  ,In snowflake table there are additional columns: no_of_cyl; recond_exp_desc; external_display_ind; print_image_typ_cd; repl_corp_cd; tag_issued_iso_cntry_cd; recond_exp_amt; tax_amt; cli_postcode; spin_sun_id; cnty_prov_loc_cd; total_recond_value_typ_cd; eff_depr_pct; cli_addr_line3; net_sale_amt; purch_addr_line4; cli_st_prov_abbr; cli_addr_line4; init_received_dt; fin_source; used_veh_sale_typ_cd_desc; total_exp_desc; purch_co_nm; title_no; cli_addr_line2; city_loc_cd; recond_cond_desc3; heading_txt; purch_city_nm; pymt_typ_cd; purch_iso_cntry_cd; total_recond_exp_cnt; cli_iso_cntry_cd; recond_loc_desc_txt; sub_no; purch_addr_line1; odom_uom_cd; cli_city_nm; recond_cond_desc2; pct_of_cost_obtained_thru_sale; tax_rt; tag_issued_st_prov_abbr; cli_addr_line1; recond_value_typ_cd; lse_rt_cd; sun_dup_ind; st_loc_cd; purch_indiv_nm; exp_msg_txt; vin_last_8_pos; sun_creation_dt; sale_typ_cd; purch_st_prov_abbr; exp_seq_no; repl_cli_no; purch_addr_line2; recond_est_amt; region_cd; taxable_amt; repl_unit_no; attachment_ind; recond_cond_desc1; total_recond_heading_txt; recond_exp_cnt; used_veh_purch_typ_cd_desc; repl_cli_asset_id; title_issued_iso_cntry_cd; total_recond_exp_amt; batch_seq_no; orig_cost_amt; total_exp_amt; purch_addr_line3; total_recond_exp_desc; phh_supplier_no; purch_postcode; sale_dt; odom_rdng_amt; recond_cond_desc4; title_issued_st_prov_abbr
+14:10:38.046 , INFO  ,Preliminary execution time: 00:04:34.910
+14:10:38.046 , INFO  ,Number of table(s) left: 22
+
++++++++++++++++++++++++++++++++++++++
+14:10:38.046 , INFO  ,COMPARING TABLES: fdb_txn_bill_new_unit_notice_payment_info (FiloDB) and txn_bill.new_unit_notice_payment_info (Snowflake)
+WARN  2019-08-15 14:10:38;072 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:10:39.350 , INFO  ,METADATA CHECK STARTED
+14:10:39.350 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:10:39;363 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:10:45.888 , INFO  ,Total FiloDB count gathered by COUNT(*) is 8321687
+14:10:46.612 , INFO  ,Total Snowflake count gathered by COUNT(*) is 8318098
+================
+14:10:46.612 , ERROR ,ERROR: Rows count is not equal at table fdb_txn_bill_new_unit_notice_payment_info (8321687) and txn_bill.new_unit_notice_payment_info (8318098)
+================
+14:10:46.613 , INFO  ,Preliminary execution time: 00:04:43.476
+14:10:46.613 , INFO  ,Number of table(s) left: 21
+
++++++++++++++++++++++++++++++++++++++
+14:10:46.613 , INFO  ,COMPARING TABLES: fdb_txn_bill_agg_new_unit_notice_acq_adj (FiloDB) and txn_bill.agg_new_unit_notice_acq_adj (Snowflake)
+WARN  2019-08-15 14:10:46;639 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:10:47.463 , INFO  ,METADATA CHECK STARTED
+14:10:47.464 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:10:47;477 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:10:53.700 , INFO  ,Total FiloDB count gathered by COUNT(*) is 12782309
+14:10:54.569 , INFO  ,Total Snowflake count gathered by COUNT(*) is 12771473
+================
+14:10:54.569 , ERROR ,ERROR: Rows count is not equal at table fdb_txn_bill_agg_new_unit_notice_acq_adj (12782309) and txn_bill.agg_new_unit_notice_acq_adj (12771473)
+================
+14:10:54.569 , INFO  ,Preliminary execution time: 00:04:51.433
+14:10:54.569 , INFO  ,Number of table(s) left: 20
+
++++++++++++++++++++++++++++++++++++++
+14:10:54.569 , INFO  ,COMPARING TABLES: fdb_core_ref_monthly_billing_cutoff_date (FiloDB) and ref_core.ref_monthly_billing_cutoff_date (Snowflake)
+WARN  2019-08-15 14:10:54;595 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:10:55.606 , INFO  ,METADATA CHECK STARTED
+14:10:55.606 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:10:55;619 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:11:01.722 , INFO  ,Total FiloDB count gathered by COUNT(*) is 253
+14:11:02.382 , INFO  ,Total Snowflake count gathered by COUNT(*) is 253
+WARN  2019-08-15 14:11:02;420 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:11:09.253 , INFO  ,CHECKSUM for column inv_smry_dt is the same: 315356576400000.0; 315356576400000 - OK!!!
+14:11:09.253 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 318372991132497.0000; 318372991132497 - OK!!!
+14:11:09.253 , INFO  ,CHECKSUM for column src_extract_dt is the same: 318372990960000.0; 318372990960000 - OK!!!
+14:11:09.253 , INFO  ,CHECKSUM for column period_end_dt is the same: 315129056400000.0; 315129056400000 - OK!!!
+14:11:09.253 , INFO  ,CHECKSUM for column period_begin_dt is the same: 314485549200000.0; 314485549200000 - OK!!!
+14:11:09.253 , INFO  ,CHECKSUM for column ref_partition is the same: 7843; 7843 - OK!!!
+14:11:09.253 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:11:09.253 , INFO  ,Preliminary execution time: 00:05:06.117
+14:11:09.253 , INFO  ,Number of table(s) left: 19
+
++++++++++++++++++++++++++++++++++++++
+14:11:09.253 , INFO  ,COMPARING TABLES: fdb_core_ref_client (FiloDB) and ref_core.ref_client (Snowflake)
+WARN  2019-08-15 14:11:09;282 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:11:10.690 , INFO  ,METADATA CHECK STARTED
+14:11:10.690 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:11:10;704 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:11:16.974 , INFO  ,Total FiloDB count gathered by COUNT(*) is 54024
+14:11:17.557 , INFO  ,Total Snowflake count gathered by COUNT(*) is 54021
+================
+14:11:17.557 , ERROR ,ERROR: Rows count is not equal at table fdb_core_ref_client (54024) and ref_core.ref_client (54021)
+================
+14:11:17.557 , INFO  ,Preliminary execution time: 00:05:14.421
+14:11:17.557 , INFO  ,Number of table(s) left: 18
+
++++++++++++++++++++++++++++++++++++++
+14:11:17.557 , INFO  ,COMPARING TABLES: fdb_ref_core_charge_reason_code_xref (FiloDB) and ref_core.ref_charge_reason_code_xref (Snowflake)
+WARN  2019-08-15 14:11:17;587 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:11:18.471 , INFO  ,METADATA CHECK STARTED
+14:11:18.472 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:11:18;485 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:11:24.568 , INFO  ,Total FiloDB count gathered by COUNT(*) is 194
+14:11:25.021 , INFO  ,Total Snowflake count gathered by COUNT(*) is 194
+WARN  2019-08-15 14:11:25;100 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:11:32.268 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 195533539557076.0000; 195533539557076 - OK!!!
+14:11:32.268 , INFO  ,CHECKSUM for column chrg_rsn_cd is the same: 775; 775 - OK!!!
+14:11:32.268 , INFO  ,CHECKSUM for column src_extract_dt is the same: 198697021200000.0; 198697021200000 - OK!!!
+14:11:32.268 , INFO  ,CHECKSUM for column adj_print_option_cd is the same: 398; 398 - OK!!!
+14:11:32.268 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 1164; 1164 - OK!!!
+14:11:32.268 , INFO  ,CHECKSUM for column chrg_rsn_cd_short_desc is the same: 0; 0.0 - OK!!!
+14:11:32.268 , INFO  ,CHECKSUM for column ref_partition is the same: 4462; 4462 - OK!!!
+14:11:32.269 , INFO  ,CHECKSUM for column chrg_rsn_sort_no is the same: 732; 732 - OK!!!
+14:11:32.269 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 9682486256733.0000; 9682486256733 - OK!!!
+14:11:32.269 , INFO  ,CHECKSUM for column dialect_cd is the same: 194; 194 - OK!!!
+14:11:32.269 , INFO  ,CHECKSUM for column chrg_rsn_cd_long_desc is the same: 3758; 3758 - OK!!!
+14:11:32.269 , INFO  ,Preliminary execution time: 00:05:29.133
+14:11:32.269 , INFO  ,Number of table(s) left: 17
+
++++++++++++++++++++++++++++++++++++++
+14:11:32.269 , INFO  ,COMPARING TABLES: fdb_core_asset_odom_rdng (FiloDB) and core.asset_odom_rdng (Snowflake)
+WARN  2019-08-15 14:11:32;308 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:11:33.337 , INFO  ,METADATA CHECK STARTED
+14:11:33.337 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:11:33;350 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:11:41.617 , INFO  ,Total FiloDB count gathered by COUNT(*) is 350281885
+14:11:42.028 , INFO  ,Total Snowflake count gathered by COUNT(*) is 349990057
+================
+14:11:42.029 , ERROR ,ERROR: Rows count is not equal at table fdb_core_asset_odom_rdng (350281885) and core.asset_odom_rdng (349990057)
+================
+14:11:42.029 , INFO  ,Preliminary execution time: 00:05:38.893
+14:11:42.029 , INFO  ,Number of table(s) left: 16
+
++++++++++++++++++++++++++++++++++++++
+14:11:42.029 , INFO  ,COMPARING TABLES: fdb_core_asset_odometer_estimate (FiloDB) and txn_acdt.asset_odometer_estimate (Snowflake)
+WARN  2019-08-15 14:11:42;060 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:11:42.825 , INFO  ,METADATA CHECK STARTED
+14:11:42.825 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:11:42;838 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:11:50.735 , INFO  ,Total FiloDB count gathered by COUNT(*) is 279613659
+14:11:51.149 , INFO  ,Total Snowflake count gathered by COUNT(*) is 279610758
+================
+14:11:51.149 , ERROR ,ERROR: Rows count is not equal at table fdb_core_asset_odometer_estimate (279613659) and txn_acdt.asset_odometer_estimate (279610758)
+================
+14:11:51.149 , INFO  ,Preliminary execution time: 00:05:48.013
+14:11:51.149 , INFO  ,Number of table(s) left: 15
+
++++++++++++++++++++++++++++++++++++++
+14:11:51.149 , INFO  ,COMPARING TABLES: fdb_ref_core_odom_rdng_src_cd (FiloDB) and ref_core.ref_odom_rdng_src_cd (Snowflake)
+WARN  2019-08-15 14:11:51;174 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:11:51.959 , INFO  ,METADATA CHECK STARTED
+14:11:51.959 , INFO  ,In source table there are additional columns: edb_asset_id
+14:11:51.960 , INFO  ,In snowflake table there are additional columns: 
+14:11:51.960 , INFO  ,Preliminary execution time: 00:05:48.824
+14:11:51.960 , INFO  ,Number of table(s) left: 14
+
++++++++++++++++++++++++++++++++++++++
+14:11:51.960 , INFO  ,COMPARING TABLES: fdb_ref_core_rntl_cmpny_veh_cls_cd (FiloDB) and ref_core.ref_rntl_cmpny_veh_cls_cd (Snowflake)
+WARN  2019-08-15 14:11:51;986 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:11:52.649 , INFO  ,METADATA CHECK STARTED
+14:11:52.650 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:11:52;663 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:11:58.713 , INFO  ,Total FiloDB count gathered by COUNT(*) is 58
+14:11:59.350 , INFO  ,Total Snowflake count gathered by COUNT(*) is 58
+WARN  2019-08-15 14:11:59;409 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:12:06.218 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 69981547977432.0000; 69981547977432 - OK!!!
+14:12:06.218 , INFO  ,CHECKSUM for column rntl_co_veh_cls_cd is the same: 190; 190 - OK!!!
+14:12:06.218 , INFO  ,CHECKSUM for column rntl_co_id is the same: 72; 72 - OK!!!
+14:12:06.218 , INFO  ,CHECKSUM for column rntl_co_veh_cls_desc is the same: 711; 711 - OK!!!
+14:12:06.218 , INFO  ,CHECKSUM for column ref_partition is the same: 1682; 1682 - OK!!!
+14:12:06.218 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:12:06.218 , INFO  ,CHECKSUM for column rntl_co_shrt_nm is the same: 464; 464 - OK!!!
+14:12:06.218 , INFO  ,CHECKSUM for column rntl_co_nm is the same: 1134; 1134 - OK!!!
+14:12:06.218 , INFO  ,Preliminary execution time: 00:06:03.082
+14:12:06.218 , INFO  ,Number of table(s) left: 13
+
++++++++++++++++++++++++++++++++++++++
+14:12:06.218 , INFO  ,COMPARING TABLES: fdb_txn_bill_ats_detail (FiloDB) and txn_bill.ats_detail (Snowflake)
+WARN  2019-08-15 14:12:06;248 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:12:07.969 , INFO  ,METADATA CHECK STARTED
+14:12:07.970 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:12:07;985 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:12:14.203 , INFO  ,Total FiloDB count gathered by COUNT(*) is 14836775
+14:12:14.889 , INFO  ,Total Snowflake count gathered by COUNT(*) is 14799199
+================
+14:12:14.889 , ERROR ,ERROR: Rows count is not equal at table fdb_txn_bill_ats_detail (14836775) and txn_bill.ats_detail (14799199)
+================
+14:12:14.889 , INFO  ,Preliminary execution time: 00:06:11.753
+14:12:14.889 , INFO  ,Number of table(s) left: 12
+
++++++++++++++++++++++++++++++++++++++
+14:12:14.889 , INFO  ,COMPARING TABLES: fdb_txn_bill_new_unit_notice_adjustment_info (FiloDB) and txn_bill.new_unit_notice_adjustment_info (Snowflake)
+WARN  2019-08-15 14:12:14;917 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:12:15.679 , INFO  ,METADATA CHECK STARTED
+14:12:15.679 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:12:15;694 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:12:21.912 , INFO  ,Total FiloDB count gathered by COUNT(*) is 4138426
+14:12:22.808 , INFO  ,Total Snowflake count gathered by COUNT(*) is 4136856
+================
+14:12:22.808 , ERROR ,ERROR: Rows count is not equal at table fdb_txn_bill_new_unit_notice_adjustment_info (4138426) and txn_bill.new_unit_notice_adjustment_info (4136856)
+================
+14:12:22.808 , INFO  ,Preliminary execution time: 00:06:19.672
+14:12:22.808 , INFO  ,Number of table(s) left: 11
+
++++++++++++++++++++++++++++++++++++++
+14:12:22.808 , INFO  ,COMPARING TABLES: fdb_txn_bill_new_unit_notice_aquisition_info (FiloDB) and txn_bill.new_unit_notice_aquisition_info (Snowflake)
+WARN  2019-08-15 14:12:22;840 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:12:23.634 , INFO  ,METADATA CHECK STARTED
+14:12:23.634 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:12:23;648 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:12:30.066 , INFO  ,Total FiloDB count gathered by COUNT(*) is 15027703
+14:12:30.585 , INFO  ,Total Snowflake count gathered by COUNT(*) is 15018437
+================
+14:12:30.586 , ERROR ,ERROR: Rows count is not equal at table fdb_txn_bill_new_unit_notice_aquisition_info (15027703) and txn_bill.new_unit_notice_aquisition_info (15018437)
+================
+14:12:30.586 , INFO  ,Preliminary execution time: 00:06:27.450
+14:12:30.586 , INFO  ,Number of table(s) left: 10
+
++++++++++++++++++++++++++++++++++++++
+14:12:30.586 , INFO  ,COMPARING TABLES: fdb_core_ref_contract_code (FiloDB) and ref_core.ref_contract_code (Snowflake)
+WARN  2019-08-15 14:12:30;618 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:12:31.842 , INFO  ,METADATA CHECK STARTED
+14:12:31.842 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:12:31;859 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:12:38.020 , INFO  ,Total FiloDB count gathered by COUNT(*) is 68
+14:12:38.761 , INFO  ,Total Snowflake count gathered by COUNT(*) is 68
+WARN  2019-08-15 14:12:38;821 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:12:45.757 , INFO  ,CHECKSUM for column contract_cd is the same: 136; 136 - OK!!!
+14:12:45.757 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 76668527788142.0000; 76668527788142 - OK!!!
+14:12:45.757 , INFO  ,CHECKSUM for column src_extract_dt is the same: 99938712420000.0; 99938712420000 - OK!!!
+14:12:45.757 , INFO  ,CHECKSUM for column lang_typ_cd is the same: 68; 68 - OK!!!
+14:12:45.757 , INFO  ,CHECKSUM for column contract_cd_desc is the same: 2631; 2631 - OK!!!
+14:12:45.757 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 386; 386 - OK!!!
+14:12:45.757 , INFO  ,CHECKSUM for column ref_partition is the same: 1156; 1156 - OK!!!
+14:12:45.757 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 92404658722847.0000; 92404658722847 - OK!!!
+14:12:45.758 , INFO  ,Preliminary execution time: 00:06:42.622
+14:12:45.758 , INFO  ,Number of table(s) left: 9
+
++++++++++++++++++++++++++++++++++++++
+14:12:45.758 , INFO  ,COMPARING TABLES: fdb_ref_core_state_province_abbreviation (FiloDB) and ref_core.ref_state_province_abbreviation (Snowflake)
+WARN  2019-08-15 14:12:45;786 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:12:46.661 , INFO  ,METADATA CHECK STARTED
+14:12:46.661 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:12:46;674 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:12:52.764 , INFO  ,Total FiloDB count gathered by COUNT(*) is 110
+14:12:53.197 , INFO  ,Total Snowflake count gathered by COUNT(*) is 110
+WARN  2019-08-15 14:12:53;266 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:13:00.103 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 114116822750189.0000; 114116822750189 - OK!!!
+14:13:00.103 , INFO  ,CHECKSUM for column st_prov_abbr is the same: 220; 220 - OK!!!
+14:13:00.103 , INFO  ,CHECKSUM for column st_prov_nm is the same: 1078; 1078 - OK!!!
+14:13:00.103 , INFO  ,CHECKSUM for column src_extract_dt is the same: 128187252480000.0; 128187252480000 - OK!!!
+14:13:00.103 , INFO  ,CHECKSUM for column lang_typ_cd is the same: 110; 110 - OK!!!
+14:13:00.103 , INFO  ,CHECKSUM for column iso_cntry_cd is the same: 202; 202 - OK!!!
+14:13:00.103 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 652; 652 - OK!!!
+14:13:00.103 , INFO  ,CHECKSUM for column ref_partition is the same: 2970; 2970 - OK!!!
+14:13:00.103 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 132006224119673.0000; 132006224119673 - OK!!!
+14:13:00.103 , INFO  ,Preliminary execution time: 00:06:56.967
+14:13:00.103 , INFO  ,Number of table(s) left: 8
+
++++++++++++++++++++++++++++++++++++++
+14:13:00.103 , INFO  ,COMPARING TABLES: fdb_ref_core_state_province_region_xref (FiloDB) and ref_core.ref_state_province_region_xref (Snowflake)
+WARN  2019-08-15 14:13:00;129 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:13:00.723 , INFO  ,METADATA CHECK STARTED
+14:13:00.723 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:13:00;737 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:13:06.916 , INFO  ,Total FiloDB count gathered by COUNT(*) is 74
+14:13:07.444 , INFO  ,Total Snowflake count gathered by COUNT(*) is 74
+WARN  2019-08-15 14:13:07;490 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:13:14.320 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 103204826929311.0000; 103204826929311 - OK!!!
+14:13:14.320 , INFO  ,CHECKSUM for column st_prov_abbr is the same: 150; 150 - OK!!!
+14:13:14.320 , INFO  ,CHECKSUM for column src_extract_dt is the same: 103204825200000.0; 103204825200000 - OK!!!
+14:13:14.320 , INFO  ,CHECKSUM for column geo_region_cd is the same: 431; 431 - OK!!!
+14:13:14.320 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 0; 0 - OK!!!
+14:13:14.320 , INFO  ,CHECKSUM for column ref_partition is the same: 1924; 1924 - OK!!!
+14:13:14.320 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:13:14.320 , INFO  ,CHECKSUM for column geo_region_rpt_group_no is the same: 74; 74 - OK!!!
+14:13:14.321 , INFO  ,Preliminary execution time: 00:07:11.185
+14:13:14.321 , INFO  ,Number of table(s) left: 7
+
++++++++++++++++++++++++++++++++++++++
+14:13:14.321 , INFO  ,COMPARING TABLES: fdb_txn_bill_loan_prin_hist_tran (FiloDB) and txn_bill.loan_prin_hist_tran (Snowflake)
+WARN  2019-08-15 14:13:14;349 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:13:15.013 , INFO  ,METADATA CHECK STARTED
+14:13:15.013 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:13:15;027 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:13:21.124 , INFO  ,Total FiloDB count gathered by COUNT(*) is 453957
+14:13:21.586 , INFO  ,Total Snowflake count gathered by COUNT(*) is 452842
+================
+14:13:21.586 , ERROR ,ERROR: Rows count is not equal at table fdb_txn_bill_loan_prin_hist_tran (453957) and txn_bill.loan_prin_hist_tran (452842)
+================
+14:13:21.586 , INFO  ,Preliminary execution time: 00:07:18.450
+14:13:21.587 , INFO  ,Number of table(s) left: 6
+
++++++++++++++++++++++++++++++++++++++
+14:13:21.587 , INFO  ,COMPARING TABLES: fdb_txn_bill_paid_ticket_info (FiloDB) and txn_bill.paid_ticket_info (Snowflake)
+WARN  2019-08-15 14:13:21;615 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:13:22.617 , INFO  ,METADATA CHECK STARTED
+14:13:22.618 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:13:22;631 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:13:28.961 , INFO  ,Total FiloDB count gathered by COUNT(*) is 483198
+14:13:29.600 , INFO  ,Total Snowflake count gathered by COUNT(*) is 483198
+WARN  2019-08-15 14:13:29;722 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:13:37.685 , INFO  ,CHECKSUM for column iso_currency_typ_cd is the same: 1449594; 1449594 - OK!!!
+14:13:37.685 , INFO  ,CHECKSUM for column summons_dt is the same: 592953499292400000.00; 592953499292400000 - OK!!!
+14:13:37.685 , INFO  ,CHECKSUM for column cli_no is the same: 1932831; 1932831 - OK!!!
+14:13:37.685 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 600527422487735016.0000; 600527422487735016 - OK!!!
+14:13:37.685 , INFO  ,CHECKSUM for column spin_pd_ticket_id is the same: 116740705922; 116740705922 - OK!!!
+14:13:37.685 , INFO  ,CHECKSUM for column summons_city_nm is the same: 4132064; 4132064 - OK!!!
+14:13:37.685 , INFO  ,CHECKSUM for column summons_amt is the same: 30791061.05; 30791061.05 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column src_extract_dt is the same: 600533118950400000.0; 600533118950400000 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column pymt_dt is the same: 703910707200000.0; 703910707200000 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column corp_cd is the same: 966396; 966396 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column iso_cntry_cd is the same: 966396; 966396 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column unit_no is the same: 2416125; 2416125 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column tag_st_prov_abbr is the same: 920434; 920434 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column pymt_typ_cd is the same: 511131; 511131 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column fine_pnlty_typ_cd is the same: 399822; 399822 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column spin_org_id is the same: 2812158722; 2812158722 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column summons_st_prov_abbr is the same: 966396; 966396 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column ticket_entry_dt is the same: 598436604716400000.0; 598436604716400000 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column summons_no is the same: 4923996; 4923996 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 110184721505537.0000; 110184721505537 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column billed_ind is the same: 483198; 483198 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column tag_no is the same: 3144998; 3144998 - OK!!!
+14:13:37.686 , INFO  ,CHECKSUM for column spin_asset_id is the same: 1357688269426; 1357688269426 - OK!!!
+14:13:37.686 , INFO  ,Preliminary execution time: 00:07:34.550
+14:13:37.686 , INFO  ,Number of table(s) left: 5
+
++++++++++++++++++++++++++++++++++++++
+14:13:37.686 , INFO  ,COMPARING TABLES: fdb_txn_bill_sold_unit_notice_info (FiloDB) and txn_bill.sold_unit_notice_info (Snowflake)
+WARN  2019-08-15 14:13:37;715 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:13:38.240 , INFO  ,METADATA CHECK STARTED
+14:13:38.240 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:13:38;255 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:13:44.635 , INFO  ,Total FiloDB count gathered by COUNT(*) is 8481294
+14:13:44.992 , INFO  ,Total Snowflake count gathered by COUNT(*) is 8480696
+================
+14:13:44.992 , ERROR ,ERROR: Rows count is not equal at table fdb_txn_bill_sold_unit_notice_info (8481294) and txn_bill.sold_unit_notice_info (8480696)
+================
+14:13:44.992 , INFO  ,Preliminary execution time: 00:07:41.856
+14:13:44.992 , INFO  ,Number of table(s) left: 4
+
++++++++++++++++++++++++++++++++++++++
+14:13:44.992 , INFO  ,COMPARING TABLES: fdb_core_asset_lease_schedule_detail (FiloDB) and core.asset_lease_schedule_detail (Snowflake)
+WARN  2019-08-15 14:13:45;017 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:13:46.033 , INFO  ,METADATA CHECK STARTED
+14:13:46.033 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:13:46;046 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:13:52.350 , INFO  ,Total FiloDB count gathered by COUNT(*) is 45192942
+14:13:52.794 , INFO  ,Total Snowflake count gathered by COUNT(*) is 45361543
+================
+14:13:52.794 , ERROR ,ERROR: Rows count is not equal at table fdb_core_asset_lease_schedule_detail (45192942) and core.asset_lease_schedule_detail (45361543)
+================
+14:13:52.794 , INFO  ,Preliminary execution time: 00:07:49.658
+14:13:52.794 , INFO  ,Number of table(s) left: 3
+
++++++++++++++++++++++++++++++++++++++
+14:13:52.794 , INFO  ,COMPARING TABLES: fdb_core_ref_inventory_status_code (FiloDB) and ref_core.ref_inventory_status_code (Snowflake)
+WARN  2019-08-15 14:13:52;823 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:13:53.464 , INFO  ,METADATA CHECK STARTED
+14:13:53.464 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:13:53;478 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:13:59.502 , INFO  ,Total FiloDB count gathered by COUNT(*) is 23
+14:13:59.834 , INFO  ,Total Snowflake count gathered by COUNT(*) is 23
+WARN  2019-08-15 14:13:59;906 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:14:06.840 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 19084712476722.0000; 19084712476722 - OK!!!
+14:14:06.840 , INFO  ,CHECKSUM for column src_extract_dt is the same: 23181674520000.0; 23181674520000 - OK!!!
+14:14:06.840 , INFO  ,CHECKSUM for column lang_typ_cd is the same: 23; 23 - OK!!!
+14:14:06.840 , INFO  ,CHECKSUM for column invy_stat_cd_short_desc is the same: 13; 13 - OK!!!
+14:14:06.840 , INFO  ,CHECKSUM for column invy_stat_cd is the same: 23; 23 - OK!!!
+14:14:06.840 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 138; 138 - OK!!!
+14:14:06.841 , INFO  ,CHECKSUM for column invy_stat_cd_long_desc is the same: 319; 319 - OK!!!
+14:14:06.841 , INFO  ,CHECKSUM for column ref_partition is the same: 483; 483 - OK!!!
+14:14:06.841 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 975560400000.0; 975560400000 - OK!!!
+14:14:06.841 , INFO  ,Preliminary execution time: 00:08:03.705
+14:14:06.841 , INFO  ,Number of table(s) left: 2
+
++++++++++++++++++++++++++++++++++++++
+14:14:06.841 , INFO  ,COMPARING TABLES: fdb_core_ref_product_class_code (FiloDB) and ref_core.ref_product_class_code (Snowflake)
+WARN  2019-08-15 14:14:06;867 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:14:07.423 , INFO  ,METADATA CHECK STARTED
+14:14:07.423 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:14:07;437 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:14:13.525 , INFO  ,Total FiloDB count gathered by COUNT(*) is 13
+14:14:14.098 , INFO  ,Total Snowflake count gathered by COUNT(*) is 13
+WARN  2019-08-15 14:14:14;161 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:14:20.992 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 10787012943509.0000; 10787012943509 - OK!!!
+14:14:20.992 , INFO  ,CHECKSUM for column src_extract_dt is the same: 13021718520000.0; 13021718520000 - OK!!!
+14:14:20.992 , INFO  ,CHECKSUM for column lang_typ_cd is the same: 13; 13 - OK!!!
+14:14:20.992 , INFO  ,CHECKSUM for column prod_class_cd is the same: 26; 26 - OK!!!
+14:14:20.992 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 78; 78 - OK!!!
+14:14:20.992 , INFO  ,CHECKSUM for column prod_class_cd_desc is the same: 155; 155 - OK!!!
+14:14:20.992 , INFO  ,CHECKSUM for column ref_partition is the same: 234; 234 - OK!!!
+14:14:20.992 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 975560400000.0; 975560400000 - OK!!!
+14:14:20.992 , INFO  ,Preliminary execution time: 00:08:17.856
+14:14:20.992 , INFO  ,Number of table(s) left: 1
+
++++++++++++++++++++++++++++++++++++++
+14:14:20.992 , INFO  ,COMPARING TABLES: fdb_ref_core_ata_code (FiloDB) and ref_core.ref_ata_code (Snowflake)
+WARN  2019-08-15 14:14:21;024 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:14:22.407 , INFO  ,METADATA CHECK STARTED
+14:14:22.408 , INFO  ,Column names and quantity is equal - OK
+WARN  2019-08-15 14:14:22;421 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:14:28.326 , INFO  ,Total FiloDB count gathered by COUNT(*) is 21323
+14:14:28.846 , INFO  ,Total Snowflake count gathered by COUNT(*) is 21323
+WARN  2019-08-15 14:14:28;935 filodb.cassandra.columnstore.CassandraColumnStore: Last token range can't merge
+14:14:35.917 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 26656195925102044.0000; 26656195925102044 - OK!!!
+14:14:35.917 , INFO  ,CHECKSUM for column ata_cd_phh_abbr is the same: 93200; 93200 - OK!!!
+14:14:35.917 , INFO  ,CHECKSUM for column src_extract_dt is the same: 26656196059200000.0; 26656196059200000 - OK!!!
+14:14:35.917 , INFO  ,CHECKSUM for column ata_cd_short_desc is the same: 258560; 258560 - OK!!!
+14:14:35.917 , INFO  ,CHECKSUM for column ata_sub_ctgy_cd is the same: 112483; 112483 - OK!!!
+14:14:35.917 , INFO  ,CHECKSUM for column ata_cd_long_desc is the same: 407335; 407335 - OK!!!
+14:14:35.917 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 2; 2 - OK!!!
+14:14:35.917 , INFO  ,CHECKSUM for column ref_partition is the same: 255876; 255876 - OK!!!
+14:14:35.917 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 18485950938020224.0000; 18485950938020224 - OK!!!
+14:14:35.917 , INFO  ,CHECKSUM for column ata_stat_cd is the same: 20455; 20455 - OK!!!
+14:14:35.917 , INFO  ,CHECKSUM for column dialect_cd is the same: 63595; 63595 - OK!!!
+14:14:35.917 , INFO  ,CHECKSUM for column pricing_line_memo_txt is the same: 47937; 47937 - OK!!!
+14:14:35.917 , INFO  ,CHECKSUM for column ata_ctgy_cd is the same: 42646; 42646 - OK!!!
+14:14:35.917 , INFO  ,Preliminary execution time: 00:08:32.781
+14:14:35.917 , INFO  ,Number of table(s) left: 0
+================
+14:06:37.549 , ERROR ,ERROR: Rows count is not equal at table fdb_core_asset_custom_field (10621674) and core.asset_custom_field (10621074)
+================

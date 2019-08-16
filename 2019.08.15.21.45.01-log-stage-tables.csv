@@ -1,0 +1,706 @@
+WARN  2019-08-15 14:06:23;133 org.spark-project.jetty.util.component.AbstractLifeCycle: FAILED SelectChannelConnector@0.0.0.0:4048: java.net.BindException: Address already in use
+WARN  2019-08-15 14:06:23;144 org.spark-project.jetty.util.component.AbstractLifeCycle: FAILED org.spark-project.jetty.server.Server@575e572f: java.net.BindException: Address already in use
+WARN  2019-08-15 14:06:23;200 org.apache.spark.util.Utils: Service 'SparkUI' could not bind on port 4048. Attempting port 4049.
+
++++++++++++++++++++++++++++++++++++++
+14:06:30.554 , INFO  ,COMPARING TABLES: core_txn_stg.asset_custom_field_stg (Cassandra) and stage.asset_custom_field (Snowflake)
+14:06:41.227 , INFO  ,METADATA CHECK STARTED
+14:06:41.231 , INFO  ,Column names and quantity is equal - OK
+14:06:53.219 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:06:54.502 , INFO  ,Total Snowflake count gathered by COUNT(*) is 92797
+================
+14:06:54.505 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.asset_custom_field_stg (0) and stage.asset_custom_field (92797)
+================
+14:06:54.506 , INFO  ,Preliminary execution time: 00:00:30.509
+14:06:54.506 , INFO  ,Number of table(s) left: 46
+
++++++++++++++++++++++++++++++++++++++
+14:06:54.506 , INFO  ,COMPARING TABLES: core_txn_stg.asset_info_stg (Cassandra) and stage.asset_info (Snowflake)
+14:07:00.712 , INFO  ,METADATA CHECK STARTED
+14:07:00.715 , INFO  ,Column names and quantity is equal - OK
+14:07:07.066 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:07:07.713 , INFO  ,Total Snowflake count gathered by COUNT(*) is 90416
+================
+14:07:07.713 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.asset_info_stg (0) and stage.asset_info (90416)
+================
+14:07:07.713 , INFO  ,Preliminary execution time: 00:00:43.716
+14:07:07.713 , INFO  ,Number of table(s) left: 45
+
++++++++++++++++++++++++++++++++++++++
+14:07:07.714 , INFO  ,COMPARING TABLES: core_txn_stg.asset_info_ext1_stg (Cassandra) and stage.asset_info_ext1 (Snowflake)
+14:07:13.716 , INFO  ,METADATA CHECK STARTED
+14:07:13.717 , INFO  ,Column names and quantity is equal - OK
+14:07:19.566 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:07:20.171 , INFO  ,Total Snowflake count gathered by COUNT(*) is 1485455
+================
+14:07:20.171 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.asset_info_ext1_stg (0) and stage.asset_info_ext1 (1485455)
+================
+14:07:20.172 , INFO  ,Preliminary execution time: 00:00:56.174
+14:07:20.172 , INFO  ,Number of table(s) left: 44
+
++++++++++++++++++++++++++++++++++++++
+14:07:20.172 , INFO  ,COMPARING TABLES: core_txn_stg.asset_info_ext2_stg (Cassandra) and stage.asset_info_ext2 (Snowflake)
+14:07:25.360 , INFO  ,METADATA CHECK STARTED
+14:07:25.362 , INFO  ,Column names and quantity is equal - OK
+14:07:31.548 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:07:32.121 , INFO  ,Total Snowflake count gathered by COUNT(*) is 42018
+================
+14:07:32.122 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.asset_info_ext2_stg (0) and stage.asset_info_ext2 (42018)
+================
+14:07:32.122 , INFO  ,Preliminary execution time: 00:01:08.125
+14:07:32.122 , INFO  ,Number of table(s) left: 43
+
++++++++++++++++++++++++++++++++++++++
+14:07:32.122 , INFO  ,COMPARING TABLES: core_txn_stg.client_asset_header_stg (Cassandra) and stage.client_asset_header (Snowflake)
+14:07:35.511 , INFO  ,METADATA CHECK STARTED
+14:07:35.512 , INFO  ,Column names and quantity is equal - OK
+14:07:42.086 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:07:42.728 , INFO  ,Total Snowflake count gathered by COUNT(*) is 3304
+================
+14:07:42.729 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.client_asset_header_stg (0) and stage.client_asset_header (3304)
+================
+14:07:42.729 , INFO  ,Preliminary execution time: 00:01:18.732
+14:07:42.729 , INFO  ,Number of table(s) left: 42
+
++++++++++++++++++++++++++++++++++++++
+14:07:42.729 , INFO  ,COMPARING TABLES: core_txn_stg.client_breakdown_stg (Cassandra) and stage.client_breakdown (Snowflake)
+14:07:49.839 , INFO  ,METADATA CHECK STARTED
+14:07:49.840 , INFO  ,Column names and quantity is equal - OK
+14:07:56.959 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:07:58.308 , INFO  ,Total Snowflake count gathered by COUNT(*) is 3
+================
+14:07:58.308 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.client_breakdown_stg (0) and stage.client_breakdown (3)
+================
+14:07:58.309 , INFO  ,Preliminary execution time: 00:01:34.312
+14:07:58.309 , INFO  ,Number of table(s) left: 41
+
++++++++++++++++++++++++++++++++++++++
+14:07:58.309 , INFO  ,COMPARING TABLES: core_txn_stg.internal_contact_info_stg (Cassandra) and stage.internal_contact_info (Snowflake)
+14:08:01.235 , INFO  ,METADATA CHECK STARTED
+14:08:01.236 , INFO  ,Column names and quantity is equal - OK
+14:08:05.348 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:08:06.255 , INFO  ,Total Snowflake count gathered by COUNT(*) is 302
+================
+14:08:06.255 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.internal_contact_info_stg (0) and stage.internal_contact_info (302)
+================
+14:08:06.255 , INFO  ,Preliminary execution time: 00:01:42.258
+14:08:06.255 , INFO  ,Number of table(s) left: 40
+
++++++++++++++++++++++++++++++++++++++
+14:08:06.255 , INFO  ,COMPARING TABLES: core_txn_stg.person_stg (Cassandra) and stage.person (Snowflake)
+14:08:10.359 , INFO  ,METADATA CHECK STARTED
+14:08:10.360 , INFO  ,Column names and quantity is equal - OK
+14:08:14.597 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:08:15.552 , INFO  ,Total Snowflake count gathered by COUNT(*) is 5548
+================
+14:08:15.552 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.person_stg (0) and stage.person (5548)
+================
+14:08:15.552 , INFO  ,Preliminary execution time: 00:01:51.555
+14:08:15.552 , INFO  ,Number of table(s) left: 39
+
++++++++++++++++++++++++++++++++++++++
+14:08:15.552 , INFO  ,COMPARING TABLES: core_txn_stg.person_custom_field_stg (Cassandra) and stage.person_custom_field (Snowflake)
+14:08:18.368 , INFO  ,METADATA CHECK STARTED
+14:08:18.368 , INFO  ,Column names and quantity is equal - OK
+14:08:23.729 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:08:24.212 , INFO  ,Total Snowflake count gathered by COUNT(*) is 20209
+================
+14:08:24.213 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.person_custom_field_stg (0) and stage.person_custom_field (20209)
+================
+14:08:24.213 , INFO  ,Preliminary execution time: 00:02:00.216
+14:08:24.213 , INFO  ,Number of table(s) left: 38
+
++++++++++++++++++++++++++++++++++++++
+14:08:24.213 , INFO  ,COMPARING TABLES: core_txn_stg.ref_date_range_stg (Cassandra) and stage.ref_date_range (Snowflake)
+14:08:30.457 , INFO  ,METADATA CHECK STARTED
+14:08:30.457 , INFO  ,Column names and quantity is equal - OK
+14:08:34.696 , INFO  ,Total Cassandra count gathered by COUNT(*) is 30
+14:08:35.123 , INFO  ,Total Snowflake count gathered by COUNT(*) is 32
+================
+14:08:35.123 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.ref_date_range_stg (30) and stage.ref_date_range (32)
+================
+14:08:35.123 , INFO  ,Preliminary execution time: 00:02:11.126
+14:08:35.123 , INFO  ,Number of table(s) left: 37
+
++++++++++++++++++++++++++++++++++++++
+14:08:35.124 , INFO  ,COMPARING TABLES: core_txn_stg.service_card_stg (Cassandra) and stage.service_card (Snowflake)
+14:08:38.600 , INFO  ,METADATA CHECK STARTED
+14:08:38.600 , INFO  ,Column names and quantity is equal - OK
+14:08:42.690 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:08:43.631 , INFO  ,Total Snowflake count gathered by COUNT(*) is 3
+================
+14:08:43.631 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.service_card_stg (0) and stage.service_card (3)
+================
+14:08:43.632 , INFO  ,Preliminary execution time: 00:02:19.634
+14:08:43.632 , INFO  ,Number of table(s) left: 36
+
++++++++++++++++++++++++++++++++++++++
+14:08:43.632 , INFO  ,COMPARING TABLES: core_txn_stg.ref_lessor_stg (Cassandra) and stage.ref_lessor (Snowflake)
+14:08:46.380 , INFO  ,METADATA CHECK STARTED
+14:08:46.380 , INFO  ,Column names and quantity is equal - OK
+14:08:50.818 , INFO  ,Total Cassandra count gathered by COUNT(*) is 67
+14:08:51.283 , INFO  ,Total Snowflake count gathered by COUNT(*) is 67
+14:08:58.792 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 99866896732427.0000; 99866896732427 - OK!!!
+14:08:58.792 , INFO  ,CHECKSUM for column src_extract_dt is the same: 99866895660000.0; 99866895660000 - OK!!!
+14:08:58.792 , INFO  ,CHECKSUM for column lessor_addr_line3 is the same: 67; 67 - OK!!!
+14:08:58.792 , INFO  ,CHECKSUM for column lessor_nm is the same: 1435; 1435 - OK!!!
+14:08:58.792 , INFO  ,CHECKSUM for column corp_cd is the same: 134; 134 - OK!!!
+14:08:58.792 , INFO  ,CHECKSUM for column lessor_addr_line1 is the same: 1244; 1244 - OK!!!
+14:08:58.792 , INFO  ,CHECKSUM for column lessor_no is the same: 134; 134 - OK!!!
+14:08:58.792 , INFO  ,CHECKSUM for column lessor_setup_dt is the same: 94824971584101.0000; 94824971584101 - OK!!!
+14:08:58.792 , INFO  ,CHECKSUM for column lessor_city_nm is the same: 444; 444 - OK!!!
+14:08:58.792 , INFO  ,CHECKSUM for column lessor_addr_line2 is the same: 75; 75 - OK!!!
+14:08:58.792 , INFO  ,CHECKSUM for column lessor_postal_cd is the same: 475; 475 - OK!!!
+14:08:58.793 , INFO  ,CHECKSUM for column ref_partition is the same: 670; 670 - OK!!!
+14:08:58.793 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 99866896763057.0000; 99866896763057 - OK!!!
+14:08:58.793 , INFO  ,Preliminary execution time: 00:02:34.796
+14:08:58.793 , INFO  ,Number of table(s) left: 35
+
++++++++++++++++++++++++++++++++++++++
+14:08:58.793 , INFO  ,COMPARING TABLES: core_txn_stg.ref_state_city_location_code_info_stg (Cassandra) and stage.ref_state_city_location_code_info (Snowflake)
+14:09:01.430 , INFO  ,METADATA CHECK STARTED
+14:09:01.431 , INFO  ,Column names and quantity is equal - OK
+14:09:06.859 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:09:07.326 , INFO  ,Total Snowflake count gathered by COUNT(*) is 0
+14:09:15.917 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 0.0; 0.0 - OK!!!
+14:09:15.918 , INFO  ,CHECKSUM for column st_abbr is the same: 0.0; 0.0 - OK!!!
+14:09:15.918 , INFO  ,CHECKSUM for column cnty_prov_loc_cd is the same: 0.0; 0.0 - OK!!!
+14:09:15.918 , INFO  ,CHECKSUM for column city_nm is the same: 0.0; 0.0 - OK!!!
+14:09:15.918 , INFO  ,CHECKSUM for column src_extract_dt is the same: 0.0; 0.0 - OK!!!
+14:09:15.918 , INFO  ,CHECKSUM for column geo_region_cd is the same: 0.0; 0.0 - OK!!!
+14:09:15.918 , INFO  ,CHECKSUM for column lang_typ_cd is the same: 0.0; 0.0 - OK!!!
+14:09:15.918 , INFO  ,CHECKSUM for column city_loc_cd is the same: 0.0; 0.0 - OK!!!
+14:09:15.918 , INFO  ,CHECKSUM for column amr_zone_cd is the same: 0.0; 0.0 - OK!!!
+14:09:15.918 , INFO  ,CHECKSUM for column sales_tax_eff_dt is the same: 0.0; 0.0 - OK!!!
+14:09:15.919 , INFO  ,CHECKSUM for column sales_tax_pct is the same: 0.0; 0.0 - OK!!!
+14:09:15.919 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 0.0; 0.0 - OK!!!
+14:09:15.919 , INFO  ,CHECKSUM for column st_loc_cd is the same: 0.0; 0.0 - OK!!!
+14:09:15.919 , INFO  ,CHECKSUM for column ref_partition is the same: 0.0; 0.0 - OK!!!
+14:09:15.919 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:09:15.919 , INFO  ,CHECKSUM for column cnty_prov_nm is the same: 0.0; 0.0 - OK!!!
+14:09:15.919 , INFO  ,CHECKSUM for column st_nm is the same: 0.0; 0.0 - OK!!!
+14:09:15.920 , INFO  ,Preliminary execution time: 00:02:51.923
+14:09:15.920 , INFO  ,Number of table(s) left: 34
+
++++++++++++++++++++++++++++++++++++++
+14:09:15.920 , INFO  ,COMPARING TABLES: core_txn_stg.other_charge_daily_stg (Cassandra) and stage.other_charge_daily (Snowflake)
+14:09:19.077 , INFO  ,METADATA CHECK STARTED
+14:09:19.078 , INFO  ,Column names and quantity is equal - OK
+14:09:23.474 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:09:24.095 , INFO  ,Total Snowflake count gathered by COUNT(*) is 731950
+================
+14:09:24.095 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.other_charge_daily_stg (0) and stage.other_charge_daily (731950)
+================
+14:09:24.096 , INFO  ,Preliminary execution time: 00:03:00.099
+14:09:24.096 , INFO  ,Number of table(s) left: 33
+
++++++++++++++++++++++++++++++++++++++
+14:09:24.096 , INFO  ,COMPARING TABLES: core_txn_stg.asset_factless_fact_info_stg (Cassandra) and stage.asset_factless_fact_info (Snowflake)
+14:09:26.648 , INFO  ,METADATA CHECK STARTED
+14:09:26.648 , INFO  ,Column names and quantity is equal - OK
+14:09:30.997 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:09:31.416 , INFO  ,Total Snowflake count gathered by COUNT(*) is 13555
+================
+14:09:31.416 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.asset_factless_fact_info_stg (0) and stage.asset_factless_fact_info (13555)
+================
+14:09:31.416 , INFO  ,Preliminary execution time: 00:03:07.419
+14:09:31.416 , INFO  ,Number of table(s) left: 32
+
++++++++++++++++++++++++++++++++++++++
+14:09:31.416 , INFO  ,COMPARING TABLES: core_txn_stg.ref_charge_code_report_grouping_stg (Cassandra) and stage.ref_charge_code_report_grouping (Snowflake)
+14:09:33.881 , INFO  ,METADATA CHECK STARTED
+14:09:33.881 , INFO  ,Column names and quantity is equal - OK
+14:09:38.073 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:09:38.802 , INFO  ,Total Snowflake count gathered by COUNT(*) is 0
+14:09:47.800 , INFO  ,CHECKSUM for column bill_chrg_cd_long_desc is the same: 0.0; 0.0 - OK!!!
+14:09:47.800 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 0.0; 0.0 - OK!!!
+14:09:47.800 , INFO  ,CHECKSUM for column bill_chrg_cd_ctgy is the same: 0.0; 0.0 - OK!!!
+14:09:47.800 , INFO  ,CHECKSUM for column bill_chrg_cd_short_desc is the same: 0.0; 0.0 - OK!!!
+14:09:47.800 , INFO  ,CHECKSUM for column rpt_group_desc is the same: 0.0; 0.0 - OK!!!
+14:09:47.800 , INFO  ,CHECKSUM for column bill_chrg_cd is the same: 0.0; 0.0 - OK!!!
+14:09:47.800 , INFO  ,CHECKSUM for column ref_partition is the same: 0.0; 0.0 - OK!!!
+14:09:47.800 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:09:47.800 , INFO  ,CHECKSUM for column rpt_group_no is the same: 0.0; 0.0 - OK!!!
+14:09:47.800 , INFO  ,CHECKSUM for column bill_chrg_cd_ctgy_desc is the same: 0.0; 0.0 - OK!!!
+14:09:47.801 , INFO  ,Preliminary execution time: 00:03:23.803
+14:09:47.801 , INFO  ,Number of table(s) left: 31
+
++++++++++++++++++++++++++++++++++++++
+14:09:47.801 , INFO  ,COMPARING TABLES: core_txn_stg.asset_info_ext3_stg (Cassandra) and stage.asset_info_ext3 (Snowflake)
+14:09:51.025 , INFO  ,METADATA CHECK STARTED
+14:09:51.026 , INFO  ,Column names and quantity is equal - OK
+14:09:55.273 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:09:56.817 , INFO  ,Total Snowflake count gathered by COUNT(*) is 23920
+================
+14:09:56.818 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.asset_info_ext3_stg (0) and stage.asset_info_ext3 (23920)
+================
+14:09:56.818 , INFO  ,Preliminary execution time: 00:03:32.821
+14:09:56.818 , INFO  ,Number of table(s) left: 30
+
++++++++++++++++++++++++++++++++++++++
+14:09:56.818 , INFO  ,COMPARING TABLES: core_txn_stg.ref_county_province_location_code_stg (Cassandra) and stage.ref_county_province_location_code (Snowflake)
+14:09:59.446 , INFO  ,METADATA CHECK STARTED
+14:09:59.447 , INFO  ,Column names and quantity is equal - OK
+14:10:03.733 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:10:04.347 , INFO  ,Total Snowflake count gathered by COUNT(*) is 0
+14:10:09.387 , INFO  ,CHECKSUM for column cnty_prov_loc_cd is the same: 0.0; 0.0 - OK!!!
+14:10:09.387 , INFO  ,CHECKSUM for column lang_typ_cd is the same: 0.0; 0.0 - OK!!!
+14:10:09.387 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 0.0; 0.0 - OK!!!
+14:10:09.387 , INFO  ,CHECKSUM for column st_loc_cd is the same: 0.0; 0.0 - OK!!!
+14:10:09.387 , INFO  ,CHECKSUM for column ref_partition is the same: 0.0; 0.0 - OK!!!
+14:10:09.387 , INFO  ,CHECKSUM for column cnty_prov_nm is the same: 0.0; 0.0 - OK!!!
+14:10:09.387 , INFO  ,Preliminary execution time: 00:03:45.390
+14:10:09.387 , INFO  ,Number of table(s) left: 29
+
++++++++++++++++++++++++++++++++++++++
+14:10:09.388 , INFO  ,COMPARING TABLES: core_txn_stg.ref_bill_charge_code_stg (Cassandra) and stage.ref_bill_charge_code (Snowflake)
+14:10:11.667 , INFO  ,METADATA CHECK STARTED
+14:10:11.668 , INFO  ,Column names and quantity is equal - OK
+14:10:15.694 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:10:16.484 , INFO  ,Total Snowflake count gathered by COUNT(*) is 1359
+================
+14:10:16.484 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.ref_bill_charge_code_stg (0) and stage.ref_bill_charge_code (1359)
+================
+14:10:16.484 , INFO  ,Preliminary execution time: 00:03:52.487
+14:10:16.484 , INFO  ,Number of table(s) left: 28
+
++++++++++++++++++++++++++++++++++++++
+14:10:16.484 , INFO  ,COMPARING TABLES: core_txn_stg.profile_client_breakdown_stg (Cassandra) and stage.profile_client_breakdown (Snowflake)
+14:10:19.794 , INFO  ,METADATA CHECK STARTED
+14:10:19.794 , INFO  ,Column names and quantity is equal - OK
+14:10:23.803 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:10:24.753 , INFO  ,Total Snowflake count gathered by COUNT(*) is 215
+================
+14:10:24.753 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.profile_client_breakdown_stg (0) and stage.profile_client_breakdown (215)
+================
+14:10:24.753 , INFO  ,Preliminary execution time: 00:04:00.756
+14:10:24.753 , INFO  ,Number of table(s) left: 27
+
++++++++++++++++++++++++++++++++++++++
+14:10:24.754 , INFO  ,COMPARING TABLES: core_txn_stg.agg_person_asset_stg (Cassandra) and stage.agg_person_asset (Snowflake)
+14:10:28.177 , INFO  ,METADATA CHECK STARTED
+14:10:28.178 , INFO  ,In source table there are additional columns: 
+14:10:28.178 , INFO  ,In snowflake table there are additional columns: dt_val; amt_val; numeric_val
+14:10:28.178 , INFO  ,Preliminary execution time: 00:04:04.181
+14:10:28.178 , INFO  ,Number of table(s) left: 26
+
++++++++++++++++++++++++++++++++++++++
+14:10:28.178 , INFO  ,COMPARING TABLES: core_txn_stg.asset_option_stg (Cassandra) and stage.asset_option (Snowflake)
+14:10:30.862 , INFO  ,METADATA CHECK STARTED
+14:10:30.863 , INFO  ,Column names and quantity is equal - OK
+14:10:34.914 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:10:36.022 , INFO  ,Total Snowflake count gathered by COUNT(*) is 28703
+================
+14:10:36.022 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.asset_option_stg (0) and stage.asset_option (28703)
+================
+14:10:36.022 , INFO  ,Preliminary execution time: 00:04:12.025
+14:10:36.022 , INFO  ,Number of table(s) left: 25
+
++++++++++++++++++++++++++++++++++++++
+14:10:36.022 , INFO  ,COMPARING TABLES: core_txn_stg.ref_tag_type_code_stg (Cassandra) and stage.ref_tag_type_code (Snowflake)
+14:10:38.319 , INFO  ,METADATA CHECK STARTED
+14:10:38.319 , INFO  ,Column names and quantity is equal - OK
+14:10:42.771 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:10:43.306 , INFO  ,Total Snowflake count gathered by COUNT(*) is 0
+14:10:48.576 , INFO  ,CHECKSUM for column tag_typ_cd_short_desc is the same: 0.0; 0.0 - OK!!!
+14:10:48.577 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 0.0; 0.0 - OK!!!
+14:10:48.577 , INFO  ,CHECKSUM for column cd_del_from_source_ind is the same: 0.0; 0.0 - OK!!!
+14:10:48.577 , INFO  ,CHECKSUM for column src_extract_dt is the same: 0.0; 0.0 - OK!!!
+14:10:48.577 , INFO  ,CHECKSUM for column tag_typ_cd is the same: 0.0; 0.0 - OK!!!
+14:10:48.577 , INFO  ,CHECKSUM for column tag_typ_cd_long_desc is the same: 0.0; 0.0 - OK!!!
+14:10:48.577 , INFO  ,CHECKSUM for column ref_partition is the same: 0.0; 0.0 - OK!!!
+14:10:48.577 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:10:48.577 , INFO  ,CHECKSUM for column dialect_cd is the same: 0.0; 0.0 - OK!!!
+14:10:48.577 , INFO  ,Preliminary execution time: 00:04:24.580
+14:10:48.577 , INFO  ,Number of table(s) left: 24
+
++++++++++++++++++++++++++++++++++++++
+14:10:48.578 , INFO  ,COMPARING TABLES: core_txn_stg.person_asset_history_stg (Cassandra) and stage.person_asset_history (Snowflake)
+14:10:52.597 , INFO  ,METADATA CHECK STARTED
+14:10:52.597 , INFO  ,Column names and quantity is equal - OK
+14:10:56.835 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:10:57.461 , INFO  ,Total Snowflake count gathered by COUNT(*) is 23164
+================
+14:10:57.462 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.person_asset_history_stg (0) and stage.person_asset_history (23164)
+================
+14:10:57.462 , INFO  ,Preliminary execution time: 00:04:33.465
+14:10:57.462 , INFO  ,Number of table(s) left: 23
+
++++++++++++++++++++++++++++++++++++++
+14:10:57.462 , INFO  ,COMPARING TABLES: core_txn_stg.new_unit_notice_info_stg (Cassandra) and stage.new_unit_notice_info (Snowflake)
+14:11:00.895 , INFO  ,METADATA CHECK STARTED
+14:11:00.896 , INFO  ,Column names and quantity is equal - OK
+14:11:05.173 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:11:06.298 , INFO  ,Total Snowflake count gathered by COUNT(*) is 399
+================
+14:11:06.298 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.new_unit_notice_info_stg (0) and stage.new_unit_notice_info (399)
+================
+14:11:06.299 , INFO  ,Preliminary execution time: 00:04:42.301
+14:11:06.299 , INFO  ,Number of table(s) left: 22
+
++++++++++++++++++++++++++++++++++++++
+14:11:06.299 , INFO  ,COMPARING TABLES: core_txn_stg.new_unit_notice_payment_info_stg (Cassandra) and stage.new_unit_notice_payment_info (Snowflake)
+14:11:09.445 , INFO  ,METADATA CHECK STARTED
+14:11:09.445 , INFO  ,Column names and quantity is equal - OK
+14:11:13.447 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:11:14.128 , INFO  ,Total Snowflake count gathered by COUNT(*) is 1108
+================
+14:11:14.128 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.new_unit_notice_payment_info_stg (0) and stage.new_unit_notice_payment_info (1108)
+================
+14:11:14.128 , INFO  ,Preliminary execution time: 00:04:50.131
+14:11:14.128 , INFO  ,Number of table(s) left: 21
+
++++++++++++++++++++++++++++++++++++++
+14:11:14.128 , INFO  ,COMPARING TABLES: core_txn_stg.agg_new_unit_notice_acq_adj_stg (Cassandra) and stage.agg_new_unit_notice_acq_adj (Snowflake)
+14:11:17.376 , INFO  ,METADATA CHECK STARTED
+14:11:17.376 , INFO  ,Column names and quantity is equal - OK
+14:11:21.610 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:11:22.112 , INFO  ,Total Snowflake count gathered by COUNT(*) is 3043
+================
+14:11:22.112 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.agg_new_unit_notice_acq_adj_stg (0) and stage.agg_new_unit_notice_acq_adj (3043)
+================
+14:11:22.113 , INFO  ,Preliminary execution time: 00:04:58.116
+14:11:22.113 , INFO  ,Number of table(s) left: 20
+
++++++++++++++++++++++++++++++++++++++
+14:11:22.113 , INFO  ,COMPARING TABLES: core_txn_stg.ref_monthly_billing_cutoff_date_stg (Cassandra) and stage.ref_monthly_billing_cutoff_date (Snowflake)
+14:11:24.490 , INFO  ,METADATA CHECK STARTED
+14:11:24.491 , INFO  ,Column names and quantity is equal - OK
+14:11:28.530 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:11:29.072 , INFO  ,Total Snowflake count gathered by COUNT(*) is 0
+14:11:34.148 , INFO  ,CHECKSUM for column inv_smry_dt is the same: 0.0; 0.0 - OK!!!
+14:11:34.148 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 0.0; 0.0 - OK!!!
+14:11:34.148 , INFO  ,CHECKSUM for column src_extract_dt is the same: 0.0; 0.0 - OK!!!
+14:11:34.148 , INFO  ,CHECKSUM for column period_end_dt is the same: 0.0; 0.0 - OK!!!
+14:11:34.148 , INFO  ,CHECKSUM for column period_begin_dt is the same: 0.0; 0.0 - OK!!!
+14:11:34.148 , INFO  ,CHECKSUM for column ref_partition is the same: 0.0; 0.0 - OK!!!
+14:11:34.148 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:11:34.148 , INFO  ,Preliminary execution time: 00:05:10.151
+14:11:34.148 , INFO  ,Number of table(s) left: 19
+
++++++++++++++++++++++++++++++++++++++
+14:11:34.148 , INFO  ,COMPARING TABLES: core_txn_stg.ref_client_stg (Cassandra) and stage.ref_client (Snowflake)
+14:11:38.583 , INFO  ,METADATA CHECK STARTED
+14:11:38.583 , INFO  ,Column names and quantity is equal - OK
+14:11:43.227 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:11:43.869 , INFO  ,Total Snowflake count gathered by COUNT(*) is 36
+================
+14:11:43.869 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.ref_client_stg (0) and stage.ref_client (36)
+================
+14:11:43.869 , INFO  ,Preliminary execution time: 00:05:19.872
+14:11:43.869 , INFO  ,Number of table(s) left: 18
+
++++++++++++++++++++++++++++++++++++++
+14:11:43.869 , INFO  ,COMPARING TABLES: core_txn_stg.ref_charge_reason_code_xref_stg (Cassandra) and stage.ref_charge_reason_code_xref (Snowflake)
+14:11:45.995 , INFO  ,METADATA CHECK STARTED
+14:11:45.995 , INFO  ,Column names and quantity is equal - OK
+14:11:51.085 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:11:51.627 , INFO  ,Total Snowflake count gathered by COUNT(*) is 0
+14:11:56.342 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 0.0; 0.0 - OK!!!
+14:11:56.343 , INFO  ,CHECKSUM for column chrg_rsn_cd is the same: 0.0; 0.0 - OK!!!
+14:11:56.343 , INFO  ,CHECKSUM for column src_extract_dt is the same: 0.0; 0.0 - OK!!!
+14:11:56.343 , INFO  ,CHECKSUM for column adj_print_option_cd is the same: 0.0; 0.0 - OK!!!
+14:11:56.343 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 0.0; 0.0 - OK!!!
+14:11:56.343 , INFO  ,CHECKSUM for column chrg_rsn_cd_short_desc is the same: 0.0; 0.0 - OK!!!
+14:11:56.343 , INFO  ,CHECKSUM for column ref_partition is the same: 0.0; 0.0 - OK!!!
+14:11:56.343 , INFO  ,CHECKSUM for column chrg_rsn_sort_no is the same: 0.0; 0.0 - OK!!!
+14:11:56.343 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:11:56.343 , INFO  ,CHECKSUM for column dialect_cd is the same: 0.0; 0.0 - OK!!!
+14:11:56.343 , INFO  ,CHECKSUM for column chrg_rsn_cd_long_desc is the same: 0.0; 0.0 - OK!!!
+14:11:56.343 , INFO  ,Preliminary execution time: 00:05:32.346
+14:11:56.343 , INFO  ,Number of table(s) left: 17
+
++++++++++++++++++++++++++++++++++++++
+14:11:56.344 , INFO  ,COMPARING TABLES: core_txn_stg.asset_odom_rdng_stg (Cassandra) and stage.asset_odom_rdng (Snowflake)
+14:11:59.199 , INFO  ,METADATA CHECK STARTED
+14:11:59.200 , INFO  ,Column names and quantity is equal - OK
+14:12:03.393 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:12:04.006 , INFO  ,Total Snowflake count gathered by COUNT(*) is 320561
+================
+14:12:04.006 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.asset_odom_rdng_stg (0) and stage.asset_odom_rdng (320561)
+================
+14:12:04.006 , INFO  ,Preliminary execution time: 00:05:40.009
+14:12:04.007 , INFO  ,Number of table(s) left: 16
+
++++++++++++++++++++++++++++++++++++++
+14:12:04.007 , INFO  ,COMPARING TABLES: core_txn_stg.asset_odometer_estimate_stg (Cassandra) and stage.asset_odometer_estimate (Snowflake)
+14:12:06.829 , INFO  ,METADATA CHECK STARTED
+14:12:06.830 , INFO  ,Column names and quantity is equal - OK
+14:12:11.088 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:12:11.563 , INFO  ,Total Snowflake count gathered by COUNT(*) is 31380
+================
+14:12:11.563 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.asset_odometer_estimate_stg (0) and stage.asset_odometer_estimate (31380)
+================
+14:12:11.563 , INFO  ,Preliminary execution time: 00:05:47.566
+14:12:11.563 , INFO  ,Number of table(s) left: 15
+
++++++++++++++++++++++++++++++++++++++
+14:12:11.563 , INFO  ,COMPARING TABLES: core_txn_stg.ref_odom_rdng_src_cd_stg (Cassandra) and stage.ref_odom_rdng_src_cd (Snowflake)
+14:12:15.423 , INFO  ,METADATA CHECK STARTED
+14:12:15.423 , INFO  ,Column names and quantity is equal - OK
+14:12:19.521 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:12:19.854 , INFO  ,Total Snowflake count gathered by COUNT(*) is 19
+================
+14:12:19.854 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.ref_odom_rdng_src_cd_stg (0) and stage.ref_odom_rdng_src_cd (19)
+================
+14:12:19.854 , INFO  ,Preliminary execution time: 00:05:55.857
+14:12:19.854 , INFO  ,Number of table(s) left: 14
+
++++++++++++++++++++++++++++++++++++++
+14:12:19.855 , INFO  ,COMPARING TABLES: core_txn_stg.ref_rntl_cmpny_veh_cls_cd_stg (Cassandra) and stage.ref_rntl_cmpny_veh_cls_cd (Snowflake)
+14:12:22.994 , INFO  ,METADATA CHECK STARTED
+14:12:22.995 , INFO  ,Column names and quantity is equal - OK
+14:12:27.132 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:12:27.567 , INFO  ,Total Snowflake count gathered by COUNT(*) is 0
+14:12:32.501 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 0.0; 0.0 - OK!!!
+14:12:32.502 , INFO  ,CHECKSUM for column rntl_co_veh_cls_cd is the same: 0.0; 0.0 - OK!!!
+14:12:32.502 , INFO  ,CHECKSUM for column rntl_co_id is the same: 0.0; 0.0 - OK!!!
+14:12:32.502 , INFO  ,CHECKSUM for column rntl_co_veh_cls_desc is the same: 0.0; 0.0 - OK!!!
+14:12:32.502 , INFO  ,CHECKSUM for column ref_partition is the same: 0.0; 0.0 - OK!!!
+14:12:32.502 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:12:32.502 , INFO  ,CHECKSUM for column rntl_co_shrt_nm is the same: 0.0; 0.0 - OK!!!
+14:12:32.502 , INFO  ,CHECKSUM for column rntl_co_nm is the same: 0.0; 0.0 - OK!!!
+14:12:32.502 , INFO  ,Preliminary execution time: 00:06:08.505
+14:12:32.502 , INFO  ,Number of table(s) left: 13
+
++++++++++++++++++++++++++++++++++++++
+14:12:32.502 , INFO  ,COMPARING TABLES: core_txn_stg.ats_detail_stg (Cassandra) and stage.ats_detail (Snowflake)
+14:12:36.172 , INFO  ,METADATA CHECK STARTED
+14:12:36.173 , INFO  ,Column names and quantity is equal - OK
+14:12:40.633 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:12:41.138 , INFO  ,Total Snowflake count gathered by COUNT(*) is 230990
+================
+14:12:41.138 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.ats_detail_stg (0) and stage.ats_detail (230990)
+================
+14:12:41.138 , INFO  ,Preliminary execution time: 00:06:17.141
+14:12:41.138 , INFO  ,Number of table(s) left: 12
+
++++++++++++++++++++++++++++++++++++++
+14:12:41.138 , INFO  ,COMPARING TABLES: core_txn_stg.new_unit_notice_adjustment_info_stg (Cassandra) and stage.new_unit_notice_adjustment_info (Snowflake)
+14:12:43.826 , INFO  ,METADATA CHECK STARTED
+14:12:43.826 , INFO  ,Column names and quantity is equal - OK
+14:12:48.015 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:12:48.447 , INFO  ,Total Snowflake count gathered by COUNT(*) is 356
+================
+14:12:48.447 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.new_unit_notice_adjustment_info_stg (0) and stage.new_unit_notice_adjustment_info (356)
+================
+14:12:48.447 , INFO  ,Preliminary execution time: 00:06:24.450
+14:12:48.447 , INFO  ,Number of table(s) left: 11
+
++++++++++++++++++++++++++++++++++++++
+14:12:48.447 , INFO  ,COMPARING TABLES: core_txn_stg.new_unit_notice_aquisition_info_stg (Cassandra) and stage.new_unit_notice_aquisition_info (Snowflake)
+14:12:51.010 , INFO  ,METADATA CHECK STARTED
+14:12:51.010 , INFO  ,Column names and quantity is equal - OK
+14:12:55.172 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:12:55.647 , INFO  ,Total Snowflake count gathered by COUNT(*) is 2687
+================
+14:12:55.647 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.new_unit_notice_aquisition_info_stg (0) and stage.new_unit_notice_aquisition_info (2687)
+================
+14:12:55.647 , INFO  ,Preliminary execution time: 00:06:31.650
+14:12:55.647 , INFO  ,Number of table(s) left: 10
+
++++++++++++++++++++++++++++++++++++++
+14:12:55.647 , INFO  ,COMPARING TABLES: core_txn_stg.ref_contract_code_stg (Cassandra) and stage.ref_contract_code (Snowflake)
+14:12:57.747 , INFO  ,METADATA CHECK STARTED
+14:12:57.747 , INFO  ,Column names and quantity is equal - OK
+14:13:01.932 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:13:02.381 , INFO  ,Total Snowflake count gathered by COUNT(*) is 0
+14:13:07.104 , INFO  ,CHECKSUM for column contract_cd is the same: 0.0; 0.0 - OK!!!
+14:13:07.105 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 0.0; 0.0 - OK!!!
+14:13:07.105 , INFO  ,CHECKSUM for column src_extract_dt is the same: 0.0; 0.0 - OK!!!
+14:13:07.105 , INFO  ,CHECKSUM for column lang_typ_cd is the same: 0.0; 0.0 - OK!!!
+14:13:07.105 , INFO  ,CHECKSUM for column contract_cd_desc is the same: 0.0; 0.0 - OK!!!
+14:13:07.105 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 0.0; 0.0 - OK!!!
+14:13:07.105 , INFO  ,CHECKSUM for column ref_partition is the same: 0.0; 0.0 - OK!!!
+14:13:07.105 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:13:07.105 , INFO  ,Preliminary execution time: 00:06:43.108
+14:13:07.105 , INFO  ,Number of table(s) left: 9
+
++++++++++++++++++++++++++++++++++++++
+14:13:07.105 , INFO  ,COMPARING TABLES: core_txn_stg.ref_state_province_abbreviation_stg (Cassandra) and stage.ref_state_province_abbreviation (Snowflake)
+14:13:09.853 , INFO  ,METADATA CHECK STARTED
+14:13:09.853 , INFO  ,Column names and quantity is equal - OK
+14:13:14.122 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:13:14.576 , INFO  ,Total Snowflake count gathered by COUNT(*) is 0
+14:13:19.134 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 0.0; 0.0 - OK!!!
+14:13:19.134 , INFO  ,CHECKSUM for column st_prov_abbr is the same: 0.0; 0.0 - OK!!!
+14:13:19.134 , INFO  ,CHECKSUM for column st_prov_nm is the same: 0.0; 0.0 - OK!!!
+14:13:19.134 , INFO  ,CHECKSUM for column src_extract_dt is the same: 0.0; 0.0 - OK!!!
+14:13:19.134 , INFO  ,CHECKSUM for column lang_typ_cd is the same: 0.0; 0.0 - OK!!!
+14:13:19.134 , INFO  ,CHECKSUM for column iso_cntry_cd is the same: 0.0; 0.0 - OK!!!
+14:13:19.134 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 0.0; 0.0 - OK!!!
+14:13:19.134 , INFO  ,CHECKSUM for column ref_partition is the same: 0.0; 0.0 - OK!!!
+14:13:19.134 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:13:19.134 , INFO  ,Preliminary execution time: 00:06:55.137
+14:13:19.134 , INFO  ,Number of table(s) left: 8
+
++++++++++++++++++++++++++++++++++++++
+14:13:19.134 , INFO  ,COMPARING TABLES: core_txn_stg.ref_state_province_region_xref_stg (Cassandra) and stage.ref_state_province_region_xref (Snowflake)
+14:13:21.572 , INFO  ,METADATA CHECK STARTED
+14:13:21.572 , INFO  ,Column names and quantity is equal - OK
+14:13:25.759 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:13:26.151 , INFO  ,Total Snowflake count gathered by COUNT(*) is 0
+14:13:30.971 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 0.0; 0.0 - OK!!!
+14:13:30.972 , INFO  ,CHECKSUM for column st_prov_abbr is the same: 0.0; 0.0 - OK!!!
+14:13:30.972 , INFO  ,CHECKSUM for column src_extract_dt is the same: 0.0; 0.0 - OK!!!
+14:13:30.972 , INFO  ,CHECKSUM for column geo_region_cd is the same: 0.0; 0.0 - OK!!!
+14:13:30.972 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 0.0; 0.0 - OK!!!
+14:13:30.972 , INFO  ,CHECKSUM for column ref_partition is the same: 0.0; 0.0 - OK!!!
+14:13:30.972 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:13:30.972 , INFO  ,CHECKSUM for column geo_region_rpt_group_no is the same: 0.0; 0.0 - OK!!!
+14:13:30.972 , INFO  ,Preliminary execution time: 00:07:06.975
+14:13:30.972 , INFO  ,Number of table(s) left: 7
+
++++++++++++++++++++++++++++++++++++++
+14:13:30.972 , INFO  ,COMPARING TABLES: core_txn_stg.loan_prin_hist_tran_stg (Cassandra) and stage.loan_prin_hist_tran (Snowflake)
+14:13:33.536 , INFO  ,METADATA CHECK STARTED
+14:13:33.536 , INFO  ,Column names and quantity is equal - OK
+14:13:37.669 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:13:38.116 , INFO  ,Total Snowflake count gathered by COUNT(*) is 0
+14:13:43.759 , INFO  ,CHECKSUM for column cli_no is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column fin_src is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column chrg_rsn_cd is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column cli_asset_id is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column bkdn is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column src_extract_dt is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column dan is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column corp_cd is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column unit_no is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column tran_rev_ind is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column tran_process_dt is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column tran_process_ind is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column pymt_id is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column inv_no is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column bill_chrg_cd is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column cli_del_from_src_ind is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column drvd_csh_rcv_yr_mon is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column rem_prin_amt is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column cash_appl_dt is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column spin_org_id is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column ast_del_from_src_ind is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column recvd_amt is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column pymt_appl_dt is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column appl_cash_id is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column cash_recv_dt is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column billed_dt is the same: 0.0; 0.0 - OK!!!
+14:13:43.759 , INFO  ,CHECKSUM for column spin_asset_id is the same: 0.0; 0.0 - OK!!!
+14:13:43.760 , INFO  ,Preliminary execution time: 00:07:19.762
+14:13:43.760 , INFO  ,Number of table(s) left: 6
+
++++++++++++++++++++++++++++++++++++++
+14:13:43.760 , INFO  ,COMPARING TABLES: core_txn_stg.paid_ticket_info_stg (Cassandra) and stage.paid_ticket_info (Snowflake)
+14:13:46.371 , INFO  ,METADATA CHECK STARTED
+14:13:46.371 , INFO  ,Column names and quantity is equal - OK
+14:13:50.636 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:13:51.106 , INFO  ,Total Snowflake count gathered by COUNT(*) is 0
+14:13:56.284 , INFO  ,CHECKSUM for column iso_currency_typ_cd is the same: 0.0; 0.0 - OK!!!
+14:13:56.284 , INFO  ,CHECKSUM for column summons_dt is the same: 0.0; 0.0 - OK!!!
+14:13:56.284 , INFO  ,CHECKSUM for column cli_no is the same: 0.0; 0.0 - OK!!!
+14:13:56.284 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 0.0; 0.0 - OK!!!
+14:13:56.284 , INFO  ,CHECKSUM for column spin_pd_ticket_id is the same: 0.0; 0.0 - OK!!!
+14:13:56.284 , INFO  ,CHECKSUM for column summons_city_nm is the same: 0.0; 0.0 - OK!!!
+14:13:56.284 , INFO  ,CHECKSUM for column summons_amt is the same: 0.0; 0.0 - OK!!!
+14:13:56.284 , INFO  ,CHECKSUM for column src_extract_dt is the same: 0.0; 0.0 - OK!!!
+14:13:56.284 , INFO  ,CHECKSUM for column pymt_dt is the same: 0.0; 0.0 - OK!!!
+14:13:56.284 , INFO  ,CHECKSUM for column corp_cd is the same: 0.0; 0.0 - OK!!!
+14:13:56.284 , INFO  ,CHECKSUM for column iso_cntry_cd is the same: 0.0; 0.0 - OK!!!
+14:13:56.284 , INFO  ,CHECKSUM for column unit_no is the same: 0.0; 0.0 - OK!!!
+14:13:56.285 , INFO  ,CHECKSUM for column tag_st_prov_abbr is the same: 0.0; 0.0 - OK!!!
+14:13:56.285 , INFO  ,CHECKSUM for column pymt_typ_cd is the same: 0.0; 0.0 - OK!!!
+14:13:56.285 , INFO  ,CHECKSUM for column fine_pnlty_typ_cd is the same: 0.0; 0.0 - OK!!!
+14:13:56.285 , INFO  ,CHECKSUM for column spin_org_id is the same: 0.0; 0.0 - OK!!!
+14:13:56.285 , INFO  ,CHECKSUM for column summons_st_prov_abbr is the same: 0.0; 0.0 - OK!!!
+14:13:56.285 , INFO  ,CHECKSUM for column ticket_entry_dt is the same: 0.0; 0.0 - OK!!!
+14:13:56.285 , INFO  ,CHECKSUM for column summons_no is the same: 0.0; 0.0 - OK!!!
+14:13:56.285 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:13:56.285 , INFO  ,CHECKSUM for column billed_ind is the same: 0.0; 0.0 - OK!!!
+14:13:56.285 , INFO  ,CHECKSUM for column tag_no is the same: 0.0; 0.0 - OK!!!
+14:13:56.285 , INFO  ,CHECKSUM for column spin_asset_id is the same: 0.0; 0.0 - OK!!!
+14:13:56.285 , INFO  ,Preliminary execution time: 00:07:32.288
+14:13:56.285 , INFO  ,Number of table(s) left: 5
+
++++++++++++++++++++++++++++++++++++++
+14:13:56.285 , INFO  ,COMPARING TABLES: core_txn_stg.sold_unit_notice_info_stg (Cassandra) and stage.sold_unit_notice_info (Snowflake)
+14:13:59.865 , INFO  ,METADATA CHECK STARTED
+14:13:59.865 , INFO  ,Column names and quantity is equal - OK
+14:14:04.270 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:14:04.664 , INFO  ,Total Snowflake count gathered by COUNT(*) is 1744
+================
+14:14:04.664 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.sold_unit_notice_info_stg (0) and stage.sold_unit_notice_info (1744)
+================
+14:14:04.664 , INFO  ,Preliminary execution time: 00:07:40.667
+14:14:04.664 , INFO  ,Number of table(s) left: 4
+
++++++++++++++++++++++++++++++++++++++
+14:14:04.664 , INFO  ,COMPARING TABLES: core_txn_stg.asset_lease_schedule_detail_stg (Cassandra) and stage.asset_lease_schedule_detail (Snowflake)
+14:14:07.231 , INFO  ,METADATA CHECK STARTED
+14:14:07.232 , INFO  ,Column names and quantity is equal - OK
+14:14:11.227 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:14:11.839 , INFO  ,Total Snowflake count gathered by COUNT(*) is 300202
+================
+14:14:11.839 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.asset_lease_schedule_detail_stg (0) and stage.asset_lease_schedule_detail (300202)
+================
+14:14:11.839 , INFO  ,Preliminary execution time: 00:07:47.842
+14:14:11.839 , INFO  ,Number of table(s) left: 3
+
++++++++++++++++++++++++++++++++++++++
+14:14:11.839 , INFO  ,COMPARING TABLES: core_txn_stg.ref_inventory_status_code_stg (Cassandra) and stage.ref_inventory_status_code (Snowflake)
+14:14:14.334 , INFO  ,METADATA CHECK STARTED
+14:14:14.334 , INFO  ,Column names and quantity is equal - OK
+14:14:18.273 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:14:18.680 , INFO  ,Total Snowflake count gathered by COUNT(*) is 0
+14:14:23.240 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 0.0; 0.0 - OK!!!
+14:14:23.240 , INFO  ,CHECKSUM for column src_extract_dt is the same: 0.0; 0.0 - OK!!!
+14:14:23.240 , INFO  ,CHECKSUM for column lang_typ_cd is the same: 0.0; 0.0 - OK!!!
+14:14:23.240 , INFO  ,CHECKSUM for column invy_stat_cd_short_desc is the same: 0.0; 0.0 - OK!!!
+14:14:23.240 , INFO  ,CHECKSUM for column invy_stat_cd is the same: 0.0; 0.0 - OK!!!
+14:14:23.240 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 0.0; 0.0 - OK!!!
+14:14:23.240 , INFO  ,CHECKSUM for column invy_stat_cd_long_desc is the same: 0.0; 0.0 - OK!!!
+14:14:23.240 , INFO  ,CHECKSUM for column ref_partition is the same: 0.0; 0.0 - OK!!!
+14:14:23.240 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:14:23.240 , INFO  ,Preliminary execution time: 00:07:59.243
+14:14:23.240 , INFO  ,Number of table(s) left: 2
+
++++++++++++++++++++++++++++++++++++++
+14:14:23.240 , INFO  ,COMPARING TABLES: core_txn_stg.ref_product_class_code_stg (Cassandra) and stage.ref_product_class_code (Snowflake)
+14:14:25.344 , INFO  ,METADATA CHECK STARTED
+14:14:25.344 , INFO  ,Column names and quantity is equal - OK
+14:14:29.116 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:14:29.683 , INFO  ,Total Snowflake count gathered by COUNT(*) is 0
+14:14:34.775 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 0.0; 0.0 - OK!!!
+14:14:34.775 , INFO  ,CHECKSUM for column src_extract_dt is the same: 0.0; 0.0 - OK!!!
+14:14:34.775 , INFO  ,CHECKSUM for column lang_typ_cd is the same: 0.0; 0.0 - OK!!!
+14:14:34.775 , INFO  ,CHECKSUM for column prod_class_cd is the same: 0.0; 0.0 - OK!!!
+14:14:34.775 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 0.0; 0.0 - OK!!!
+14:14:34.775 , INFO  ,CHECKSUM for column prod_class_cd_desc is the same: 0.0; 0.0 - OK!!!
+14:14:34.775 , INFO  ,CHECKSUM for column ref_partition is the same: 0.0; 0.0 - OK!!!
+14:14:34.775 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:14:34.775 , INFO  ,Preliminary execution time: 00:08:10.778
+14:14:34.775 , INFO  ,Number of table(s) left: 1
+
++++++++++++++++++++++++++++++++++++++
+14:14:34.776 , INFO  ,COMPARING TABLES: core_txn_stg.ref_ata_code_stg (Cassandra) and stage.ref_ata_code (Snowflake)
+14:14:37.489 , INFO  ,METADATA CHECK STARTED
+14:14:37.489 , INFO  ,Column names and quantity is equal - OK
+14:14:41.482 , INFO  ,Total Cassandra count gathered by COUNT(*) is 0
+14:14:41.824 , INFO  ,Total Snowflake count gathered by COUNT(*) is 0
+14:14:46.146 , INFO  ,CHECKSUM for column spin_audit_insert_dt is the same: 0.0; 0.0 - OK!!!
+14:14:46.146 , INFO  ,CHECKSUM for column ata_cd_phh_abbr is the same: 0.0; 0.0 - OK!!!
+14:14:46.146 , INFO  ,CHECKSUM for column src_extract_dt is the same: 0.0; 0.0 - OK!!!
+14:14:46.146 , INFO  ,CHECKSUM for column ata_cd_short_desc is the same: 0.0; 0.0 - OK!!!
+14:14:46.146 , INFO  ,CHECKSUM for column ata_sub_ctgy_cd is the same: 0.0; 0.0 - OK!!!
+14:14:46.147 , INFO  ,CHECKSUM for column ata_cd_long_desc is the same: 0.0; 0.0 - OK!!!
+14:14:46.147 , INFO  ,CHECKSUM for column cd_del_from_src_ind is the same: 0.0; 0.0 - OK!!!
+14:14:46.147 , INFO  ,CHECKSUM for column ref_partition is the same: 0.0; 0.0 - OK!!!
+14:14:46.147 , INFO  ,CHECKSUM for column spin_audit_update_dt is the same: 0.0; 0.0 - OK!!!
+14:14:46.147 , INFO  ,CHECKSUM for column ata_stat_cd is the same: 0.0; 0.0 - OK!!!
+14:14:46.147 , INFO  ,CHECKSUM for column dialect_cd is the same: 0.0; 0.0 - OK!!!
+14:14:46.147 , INFO  ,CHECKSUM for column pricing_line_memo_txt is the same: 0.0; 0.0 - OK!!!
+14:14:46.147 , INFO  ,CHECKSUM for column ata_ctgy_cd is the same: 0.0; 0.0 - OK!!!
+14:14:46.147 , INFO  ,Preliminary execution time: 00:08:22.150
+14:14:46.147 , INFO  ,Number of table(s) left: 0
+================
+14:06:54.505 , ERROR ,ERROR: Rows count is not equal at table core_txn_stg.asset_custom_field_stg (0) and stage.asset_custom_field (92797)
+================
