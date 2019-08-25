@@ -18,7 +18,7 @@
 
         /* ----------------- US.ANA01514.CMD ----------------- */
 
-    insert_job: US.ANA01514.CMD   job_type: CMD
+    шnsert_job: US.ANA01514.CMD   job_type: CMD
     box_name: US.ANA01010.BOX
     command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreCustomFldAssetSeedStg"
     machine: Virtual_DEV_Linux

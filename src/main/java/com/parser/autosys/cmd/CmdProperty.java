@@ -10,15 +10,16 @@ import java.util.Map;
 
 
 @Getter
-public class Cmd extends Parser {
+public class CmdProperty extends Parser {
 
     public final static String JOB_TYPE_CMD = "CMD";
     private Map<String, String> cmdMap = new HashMap<>();
 
 
-    public Cmd(List<String> str) {
+    public CmdProperty(List<String> str) {
         cmdMap.putAll(splitPropertyStringsByDoublePoints(str, JOB_TYPE_CMD));
     }
+
 
 
 }

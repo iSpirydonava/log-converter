@@ -1,6 +1,12 @@
 package com.parser;
 
 
+import com.parser.autosys.box.BoxFormatting;
+import com.parser.autosys.box.BoxParser;
+import com.parser.autosys.box.BoxProperty;
+import com.parser.autosys.cmd.CmdFormating;
+import com.parser.autosys.cmd.CmdParser;
+import com.parser.autosys.cmd.CmdProperty;
 import com.parser.file.FileList;
 import com.parser.file.FileReader;
 import com.parser.file.FileWritter;
@@ -11,6 +17,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.parser.autosys.SortImpl.sortBoxByNumber;
+import static com.parser.autosys.SortImpl.sortCmdByNumber;
+
 
 public class Runner {
     private static FileReader fileReader = new FileReader();
@@ -19,6 +28,8 @@ public class Runner {
     private static LogParser logParser = new LogParser();
     private static CmdParser cmdParser = new CmdParser();
     private static BoxParser boxParser = new BoxParser();
+    private static BoxFormatting boxFormatting = new BoxFormatting();
+    private static CmdFormating cmdFormating = new CmdFormating();
 
 
     public static void main(String... args) {
@@ -34,12 +45,26 @@ public class Runner {
         }
 
         List<String> z = fileList.getFileListInFolder("./jil");
+
+        List<CmdProperty> cmdList = new ArrayList<>();
+        List<BoxProperty> boxList = new ArrayList<>();
+
         z.forEach(x -> {
             val y = fileReader.readLinesFromResourceFile(x);
-            val cmdList = cmdParser.getCmdList(y);
-            val boxList= boxParser.getBoxList(y);
-            System.out.println();
+            cmdList.addAll(cmdParser.getCmdList(y));
+            boxList.addAll(boxParser.getBoxList(y));
         });
+
+        val sortCmdList = sortCmdByNumber(cmdList);
+        val sortBoxList = sortBoxByNumber(boxList);
+
+
+      val boxToFile=  boxFormatting.boxFormat(sortBoxList);
+      fileWritter.writeInFile("box_order.txt", boxToFile);
+      val cmdToFile = cmdFormating.cmdFormat(sortCmdList);
+      fileWritter.writeInFile("cmd_order.txt",cmdToFile);
+
+        System.out.println();
     }
 
 }
