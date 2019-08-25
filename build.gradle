@@ -13,6 +13,12 @@ repositories {
 
 dependencies {
     compile 'org.projectlombok:lombok:1.18.8'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-collections4
+    compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.4'
+
+
+
+
 }
 
 
