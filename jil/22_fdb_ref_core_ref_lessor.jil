@@ -1,0 +1,34 @@
+
+    /* ---------------- fdb_ref_core_ref_lessor ----------*/
+    /* ----------------- US.ANA01530.CMD ----------------- */
+
+    insert_job: US.ANA01530.CMD   job_type: CMD
+    box_name: US.ANA01022.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreRefLessorStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys@hvlvops1
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfRefCoreRefLessorStg to load lessor table of Snowflake from spin"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01531.CMD ----------------- */
+
+    insert_job: US.ANA01531.CMD   job_type: CMD
+    box_name: US.ANA01022.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreRefLessor"
+    machine: Virtual_DEV_Linux
+    owner: autosys@hvlvops1
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01530.CMD)
+    description: "Triggers job jSfRefCoreRefLessor to load lessor data from Spin Source to Snowflake Target"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

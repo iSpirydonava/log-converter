@@ -1,0 +1,666 @@
+/* ----------------- US.ANA01000.BOX ----------------- */
+
+insert_job: US.ANA01000.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 1
+days_of_week: all
+start_times: "06:00"
+description: "Load Start Job"
+alarm_if_fail: 1
+application: ANA
+
+ /* ----------------- US.ANA01001.BOX ----------------- */
+
+ insert_job: US.ANA01001.BOX   job_type: BOX
+ owner: autosys
+ permission: gx,ge,wx
+ date_conditions: 0
+ condition: s(US.ANA01000.BOX)
+ description: "All ETL jobs from BIANALYTICS01 project for Snowflake tables"
+ alarm_if_fail: 1
+ application: ANA
+
+  /* ----------------- US.ANA01002.BOX ----------------- */
+
+  insert_job: US.ANA01002.BOX   job_type: BOX
+  owner: autosys
+  permission: gx,ge,wx
+  date_conditions: 0
+  condition: s(US.ANA01013.BOX)
+  description: "All ETL jobs from BIANALYTICS01-Custom project for Snowflake tables"
+  alarm_if_fail: 1
+  application: ANA
+
+ /* ----------------- US.ANA01003.BOX ----------------- */
+
+ insert_job: US.ANA01003.BOX   job_type: BOX
+ owner: autosys
+ permission: gx,ge,wx
+ date_conditions: 0
+ condition: s(US.ANA01001.BOX)
+ description: "Shared ETL jobs from asset_info Snowflake tables"
+ alarm_if_fail: 1
+ application: ANA
+
+  /* ----------------- US.ANA01001.BOX ----------------- */
+
+  insert_job: US.ANA01004.BOX   job_type: BOX
+  owner: autosys
+  permission: gx,ge,wx
+  date_conditions: 0
+  condition: s(US.ANA01010.BOX)
+  description: "All ETL jobs from BIANALYTICS01-Lease_projections project for Snowflake tables"
+  alarm_if_fail: 1
+  application: ANA
+
+  /* ----------------- US.ANA01001.BOX ----------------- */
+
+  insert_job: US.ANA01005.BOX   job_type: BOX
+  owner: autosys
+  permission: gx,ge,wx
+  date_conditions: 1
+  run_calendar: Sun_of_Billing
+  start_times: "22:00"
+  description: "All ETL jobs from BIANALYTICS01-Billing project for Snowflake tables"
+  alarm_if_fail: 1
+  application: ANA
+
+    /* ----------------- US.ANA01001.BOX ----------------- */
+
+  insert_job: US.ANA01006.BOX   job_type: BOX
+  owner: autosys
+  permission: gx,ge,wx
+  date_conditions: 0
+  description: "All ETL jobs from BIANALYTICS01-RentalBilling project for Snowflake tables"
+  alarm_if_fail: 1
+  application: ANA
+
+
+
+ /* ----------------- US.ANA01010.BOX ----------------- */
+
+ insert_job: US.ANA01010.BOX   job_type: BOX
+ owner: autosys
+ permission: gx,ge,wx
+ date_conditions: 0
+ condition: s(US.ANA01002.BOX)
+ description: "ETL Jobs for Snowflake table core.asset_custom_field"
+ alarm_if_fail: 1
+ application: ANA
+
+ /* ----------------- US.ANA01011.BOX ----------------- */
+
+ insert_job: US.ANA01011.BOX   job_type: BOX
+ owner: autosys
+ permission: gx,ge,wx
+ date_conditions: 0
+ condition: s(US.ANA01001.BOX)
+ description: "ETL Jobs for Snowflake table core.asset_info"
+ alarm_if_fail: 1
+ application: ANA
+
+/* ----------------- US.ANA01012.BOX ----------------- */
+
+insert_job: US.ANA01012.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01011.BOX)
+description: "ETL Jobs for Snowflake table core.asset_info_ext1"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01013.BOX ----------------- */
+
+insert_job: US.ANA01013.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01012.BOX)
+description: "ETL Jobs for Snowflake table core.asset_info_ext2"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01014.BOX ----------------- */
+
+insert_job: US.ANA01014.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01002.BOX)& s(US.ANA01013.BOX)
+description: "ETL Jobs for Snowflake table core.client_asset_header"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01015.BOX ----------------- */
+
+insert_job: US.ANA01015.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table core.client_breakdown"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01016.BOX ----------------- */
+
+insert_job: US.ANA01016.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table core.internal_contact_info"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01017.BOX ----------------- */
+
+insert_job: US.ANA01017.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table core.person"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01018.BOX ----------------- */
+
+insert_job: US.ANA01018.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01002.BOX)
+description: "ETL Jobs for Snowflake table core.person_custom_field"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01019.BOX ----------------- */
+
+insert_job: US.ANA01019.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table core.ref_date_range"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01020.BOX ----------------- */
+
+insert_job: US.ANA01020.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table core.service_card"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01021.BOX ----------------- */
+
+insert_job: US.ANA01021.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table core.user_pref"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01022.BOX ----------------- */
+
+insert_job: US.ANA01022.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_lessor"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01023.BOX ----------------- */
+
+insert_job: US.ANA01023.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_state_city_location_code_info"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01024.BOX ----------------- */
+
+insert_job: US.ANA01024.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+condition:s(US.ANA01005.BOX)
+description: "Billing Monthly Jobs: ETL Jobs for Snowflake table txn_bill.billing_charge"
+alarm_if_fail: 1
+application: ANA
+
+
+
+/* ----------------- US.ANA01025.BOX ----------------- */
+
+insert_job: US.ANA01025.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table txn_bill.other_charge_daily"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01026.BOX ----------------- */
+
+insert_job: US.ANA01026.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01031.BOX)
+description: "ETL Jobs for Snowflake table txn_inv.asset_factless_fact_info"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01027.BOX ----------------- */
+
+insert_job: US.ANA01027.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table core.ref_charge_code_report_grouping"
+alarm_if_fail: 1
+application: ANA
+
+
+/* ----------------- US.ANA01028.BOX ----------------- */
+
+insert_job: US.ANA01028.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01038.BOX)
+description: "ETL Jobs for Snowflake table core.asset_info_ext3"
+alarm_if_fail: 1
+application: ANA
+
+
+/* ----------------- US.ANA01029.BOX ----------------- */
+
+insert_job: US.ANA01029.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01039.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_county_province_location_code"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01030.BOX ----------------- */
+
+insert_job: US.ANA01030.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_bill_charge_code"
+alarm_if_fail: 1
+application: ANA
+
+
+/* ----------------- US.ANA01031.BOX ----------------- */
+
+insert_job: US.ANA01031.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table core.profile_client_breakdown"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01032.BOX ----------------- */
+
+insert_job: US.ANA01032.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table txn_inv.agg_person_asset"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01033.BOX ----------------- */
+
+insert_job: US.ANA01033.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table txn_inv.agg_person_asset"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01034.BOX ----------------- */
+
+insert_job: US.ANA01034.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01040.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_tag_type_code"
+alarm_if_fail: 1
+application: ANA
+
+
+/* ----------------- US.ANA01035.BOX ----------------- */
+
+insert_job: US.ANA01035.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01040.BOX)
+description: "ETL Jobs for Snowflake table core.person_asset_history"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01036.BOX ----------------- */
+
+insert_job: US.ANA01036.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table txn_bill.new_unit_notice_info"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01037.BOX ----------------- */
+
+insert_job: US.ANA01037.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01047.BOX)
+description: "ETL Jobs for Snowflake table txn_bill.new_unit_notice_payment_info"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01038.BOX ----------------- */
+
+insert_job: US.ANA01038.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_state_city_location_code_info"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01039.BOX ----------------- */
+
+insert_job: US.ANA01039.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_monthly_billing_cutoff_date"
+alarm_if_fail: 1
+application: ANA
+
+
+/* ----------------- US.ANA01040.BOX ----------------- */
+
+insert_job: US.ANA01040.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_client"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01041.BOX ----------------- */
+
+insert_job: US.ANA01041.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_charge_reason_code_xref"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01042.BOX ----------------- */
+
+insert_job: US.ANA01042.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01024.BOX)
+description: "ETL Jobs for Snowflake table core.asset_odom_mnthly_vrnc"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01043.BOX ----------------- */
+
+insert_job: US.ANA01043.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table core.asset_odom_rdng"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01044.BOX ----------------- */
+
+insert_job: US.ANA01044.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table core.asset_odometer_estimate"
+alarm_if_fail: 1
+application: ANA
+
+
+/* ----------------- US.ANA01045.BOX ----------------- */
+
+insert_job: US.ANA01045.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_odom_rdng_src_cd"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01046.BOX ----------------- */
+
+insert_job: US.ANA01046.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01023.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_rntl_cmpny_veh_cls_cd"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01047.BOX ----------------- */
+
+insert_job: US.ANA01047.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01011.BOX)
+description: "ETL Jobs for Snowflake table txn_bill.ats_detail"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01048.BOX ----------------- */
+
+insert_job: US.ANA01048.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01038.BOX)
+description: "ETL Jobs for Snowflake table txn_bill.new_unit_notice_adjustment_info"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01049.BOX ----------------- */
+
+insert_job: US.ANA01049.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table txn_bill.new_unit_notice_aquisition_info"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01050.BOX ----------------- */
+
+insert_job: US.ANA01050.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01040.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_contract_code"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01051.BOX ----------------- */
+
+insert_job: US.ANA01051.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01027.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_state_province_abbreviation"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01052.BOX ----------------- */
+
+insert_job: US.ANA01052.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01027.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_state_province_region_xref"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01053.BOX ----------------- */
+
+insert_job: US.ANA01053.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01060.BOX)
+description: "ETL Jobs for Snowflake table txn_bill.loan_prin_hist_tran"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01054.BOX ----------------- */
+
+insert_job: US.ANA01054.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01044.BOX)
+description: "ETL Jobs for Snowflake table txn_bill.paid_ticket_info"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01055.BOX ----------------- */
+
+insert_job: US.ANA01055.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01044.BOX)
+description: "ETL Jobs for Snowflake table txn_bill.sold_unit_notice_info"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01056.BOX ----------------- */
+
+insert_job: US.ANA01056.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01004.BOX)
+description: "ETL Jobs for Snowflake table core.asset_lease_schedule_detail"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01057.BOX ----------------- */
+
+insert_job: US.ANA01057.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_inventory_status_code"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01058.BOX ----------------- */
+
+insert_job: US.ANA01058.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01001.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_product_class_code"
+alarm_if_fail: 1
+application: ANA
+
+/* ----------------- US.ANA01059.BOX ----------------- */
+
+insert_job: US.ANA01059.BOX   job_type: BOX
+owner: autosys
+permission: gx,ge,wx
+date_conditions: 0
+condition: s(US.ANA01027.BOX)
+description: "ETL Jobs for Snowflake table ref_core.ref_ata_code"
+alarm_if_fail: 1
+application: ANA
+
+
+
+/* ----------------- US.ANA01060.BOX ----------------- */
+
+insert_job: US.ANA01060.BOX    job_type: box
+description: "Rental Billing Monthly Jobs: ETL Jobs for Snowflake table txn_bill.billing_charge"
+condition: s(US.ANA01006.BOX)
+owner: autosys
+application: ANA
+permission: gx,ge,wx
+max_run_alarm: 0
+alarm_if_fail: y
+date_conditions: y
+start_times: "07:00"
+run_calendar: 1st_of_Month
+send_notification: n
+
+
+/* ----------------- US.ANA01061.BOX ----------------- */
+
+insert_job: US.ANA01061.BOX    job_type: box
+owner: autosys
+permission: gx,ge,wx
+condition: s(US.ANA01013.BOX)
+description: "Trigger jSfPahSpinPsnId"
+alarm_if_fail: 1
+application: ANA
+
+

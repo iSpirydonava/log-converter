@@ -1,0 +1,52 @@
+
+    /* ---------------- fdb_core_asset_info_ext1 ----------*/
+    /* ----------------- US.ANA01044.CMD ----------------- */
+
+    insert_job: US.ANA01044.CMD   job_type: CMD
+    box_name: US.ANA01012.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreAssetInfoExt1Stg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01071.CMD)
+    description: "Triggers job jSfCoreAssetInfoExt1Stg  to load data from Spin Source asset_acquisition to Snowflake Stage asset_info_ext1"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01378.CMD ----------------- */
+
+    insert_job: US.ANA01378.CMD   job_type: CMD
+    box_name: US.ANA01012.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreAstInfoExt1UpdStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01044.CMD)
+    description: "Triggers job jSfCoreAstInfoExt1UpdStg to delete data in Snowflake Stage asset_info_ext1 from Spin CDC tables"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01098.CMD ----------------- */
+
+    insert_job: US.ANA01098.CMD   job_type: CMD
+    box_name: US.ANA01012.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreAssetInfoExt1"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01378.CMD)
+    description: "Triggers job jSfCoreAssetInfoExt1 to load data from Spin Source asset_info_ext1_stg to Snowflake Target asset_info_ext1"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

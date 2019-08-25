@@ -1,0 +1,33 @@
+    /* ----------------- fdb_txn_bill_new_unit_notice_payment_info ----------------- */
+    /* ----------------- US.ANA01300.CMD ----------------- */
+
+    insert_job: US.ANA01300.CMD   job_type: CMD 
+    box_name: US.ANA01037.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillNwUntNtcPymntInfStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfTxnBillNwUntNtcPymntInfStg to load data from Spin Source new_unit_notice_payment to Snowflake Stage new_unit_notice_payment_info"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+    
+    /* ----------------- US.ANA01308.CMD ----------------- */ 
+    
+    insert_job: US.ANA01308.CMD   job_type: CMD 
+    box_name: US.ANA01037.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillNwUntNtcPymntInf"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01300.CMD)
+    description: "Triggers job jSfTxnBillNwUntNtcPymntInf to load data from Cassandra Source new_unit_notice_payment_info_stg to Snowflake Target new_unit_notice_payment_info"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

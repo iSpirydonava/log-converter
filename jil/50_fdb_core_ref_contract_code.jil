@@ -1,0 +1,33 @@
+    /* ----------------- fdb_core_ref_contract_code ----------------- */
+    /* ----------------- US.ANA01209.CMD ----------------- */
+
+    insert_job: US.ANA01209.CMD   job_type: CMD
+    box_name: US.ANA01050.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreCntractCdStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfRefCoreRefCntractCdStg to load data from Spin Source contract_code to Snowflake Stage ref_contract_code"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01252.CMD ----------------- */
+
+    insert_job: US.ANA01252.CMD   job_type: CMD
+    box_name: US.ANA01050.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreCntractCd"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01209.CMD)
+    description: "Triggers job jSfRefCoreRefCntractCd to load data from Cassandra Source ref_contract_code_stg to Snowflake Target fdb_core_ref_contract_code"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

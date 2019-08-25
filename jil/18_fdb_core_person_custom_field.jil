@@ -1,0 +1,52 @@
+    /* ---------------- fdb_core_person_custom_field ----------*/
+    /* ----------------- US.ANA01513.CMD ----------------- */
+
+    insert_job: US.ANA01513.CMD   job_type: CMD
+    box_name: US.ANA01018.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCorePersonCstmFldSeedStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    /*condition: s(US.ANA01601.CMD) -custom workflow start?*/
+    description: "Triggers job jSfCorePersonCstmFldSeedStg to load data from Spin Source Person Custom Fields to Snowflake Stage Person Custom Fields"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01446.CMD ----------------- */
+
+    insert_job: US.ANA01446.CMD   job_type: CMD
+    box_name: US.ANA01018.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCorePersonCstmFldStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01513.CMD)
+    description: "Triggers job jSfCorePersonCstmFldStg to load data from Spin Source Person Custom Fields to Snowflake Stage Person Custom Fields"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+
+    /* ----------------- US.ANA01447.CMD ----------------- */
+
+    insert_job: US.ANA01447.CMD   job_type: CMD
+    box_name: US.ANA01018.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCorePersonCstmFld"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01446.CMD)
+    description: "Triggers job jSfCorePersonCstmFld to load data from Spin Source Person Custom Fields to Snowflake Target Person Custom Fields"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

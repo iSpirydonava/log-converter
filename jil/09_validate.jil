@@ -1,0 +1,29 @@
+       /* ----------------- US.ANA01009.BOX ----------------- */
+
+     insert_job: US.ANA01009.BOX   job_type: BOX
+     owner: autosys
+     permission: gx,ge,wx
+     date_conditions: 0
+     condition: s(US.ANA01066.BOX)
+     description: "Box to trigger automatic data validation tool for Stage and Final tables"
+     alarm_if_fail: 1
+     application: ANA
+
+       /* ----------------- US.ANA01009.CMD ----------------- */
+
+    insert_job: US.ANA01009.CMD   job_type: CMD
+    box_name: US.ANA01009.BOX
+    command: /opt/autosys/jobs/general/env/run_Jenkins_data_validation_job.ksh
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers data validation jobs in Jenkins"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+
+

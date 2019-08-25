@@ -1,0 +1,33 @@
+    /* ----------------- fdb_ref_core_charge_reason_code_xref ----------------- */
+    /* ----------------- US.ANA01229.CMD ----------------- */
+
+    insert_job: US.ANA01229.CMD   job_type: CMD
+    box_name: US.ANA01041.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreChrgRsnCdXrfStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfRefCoreRefChrgRsnCdXrfStg to load data from Spin Source charge_reason_code_xref to Snowflake Stage charge_reason_code_xref"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+     /* ----------------- US.ANA01272.CMD ----------------- */
+
+     insert_job: US.ANA01272.CMD   job_type: CMD
+     box_name: US.ANA01041.BOX
+     command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreChrgRsnCdXrf"
+     machine: Virtual_DEV_Linux
+     owner: autosys
+     permission: gx,ge,wx
+     date_conditions: 0
+     condition: s(US.ANA01229.CMD)
+     description: "Triggers job jSfRefCoreRefChrgRsnCdXrf to load data from Spin Source ref_new_unit_notice_stg to Snowflake Stage ref_new_unit_notice"
+     std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+     std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+     alarm_if_fail: 1
+     profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+     application: ANA

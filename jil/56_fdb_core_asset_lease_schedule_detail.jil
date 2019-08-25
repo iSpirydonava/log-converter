@@ -1,0 +1,33 @@
+  /* ----------------- US.ANA01733.CMD ----------------- */
+
+    insert_job: US.ANA01733.CMD   job_type: CMD
+    box_name: US.ANA01056.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreAssetLeaseScheduleDetailStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfCoreAssetLeaseScheduleDetailStg to load data from Spin Source asset Lease schedule to Snowflake Target asset lease schedule Stage"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+
+        /* ----------------- US.ANA01734.CMD ----------------- */
+
+        insert_job: US.ANA01734.CMD   job_type: CMD
+        box_name: US.ANA01056.BOX
+        command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreAssetLeaseScheduleDetail"
+        machine: Virtual_DEV_Linux
+        owner: autosys
+        permission: gx,ge,wx
+        date_conditions: 0
+        condition: s(US.ANA01733.CMD)
+        description: "Triggers job jSfCoreAssetLeaseScheduleDetail to load data from Snowflake source asset lease schedule to Target Snowflake asset lease schedule"
+        std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        alarm_if_fail: 1
+        profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+        application: ANA

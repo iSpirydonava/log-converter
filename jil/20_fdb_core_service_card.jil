@@ -1,0 +1,50 @@
+
+    /* ----------------- US.ANA01284.CMD ----------------- */
+
+    insert_job: US.ANA01284.CMD   job_type: CMD
+    box_name: US.ANA01020.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreSrvcCrdSplit1IncStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfCoreSrvcCrdSplit1IncStg to load data from Spin Source service_card to Snowflake Stage service_card"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01285.CMD ----------------- */
+
+    insert_job: US.ANA01285.CMD   job_type: CMD
+    box_name: US.ANA01020.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreSrvcCrdSplit2IncStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01284.CMD)
+    description: "Triggers job jSfCoreSrvcCrdSplit2IncStg to load data from Spin Source service_card to Snowflake Target service_card"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01291.CMD ----------------- */
+
+    insert_job: US.ANA01291.CMD   job_type: CMD
+    box_name: US.ANA01020.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreSrvcCrdInc"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01285.CMD)
+    description: "Triggers job jSfCoreSrvcCrdInc to load data from Cassandra Source service_card_stg to Snowflake Target service_card"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

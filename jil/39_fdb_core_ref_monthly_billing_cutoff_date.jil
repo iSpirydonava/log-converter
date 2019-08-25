@@ -1,0 +1,34 @@
+
+    /* ----------------- fdb_core_ref_monthly_billing_cutoff_date ----------------- */
+    /* ----------------- US.ANA01230.CMD ----------------- */
+
+    insert_job: US.ANA01230.CMD   job_type: CMD
+    box_name: US.ANA01039.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreMnthlyBlngCutOffDateStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfRefCoreMnthlyBlngCutOffDateStg to load data from Spin Source monthly_billing_cutoff_date to Snowflake Stage ref_monthly_billing_cutoff_date"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01269.CMD ----------------- */
+
+    insert_job: US.ANA01269.CMD   job_type: CMD
+    box_name: US.ANA01039.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreMnthlyBlngCutOffDate"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01230.CMD)
+    description: "Triggers job jSfRefCoreMnthlyBlngCutOffDate to load data from Cassandra Source ref_monthly_billing_cutoff_date to Filodb Target ref_monthly_billing_cutoff_date"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

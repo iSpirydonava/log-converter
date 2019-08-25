@@ -1,0 +1,34 @@
+
+    /* ----------------- fdb_core_asset_option ----------------- */
+    /* ----------------- US.ANA01063.CMD ----------------- */
+
+    insert_job: US.ANA01063.CMD   job_type: CMD
+    box_name: US.ANA01033.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreAstOptnStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfCoreAstOptnStg to load data from Spin Source asset_option to Snowflake Stage asset_option"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01115.CMD ----------------- */
+
+    insert_job: US.ANA01115.CMD   job_type: CMD
+    box_name: US.ANA01033.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreAstOptn"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01063.CMD)
+    description: "Triggers job jSfCoreAstOptn to load data from Cassandra Source asset_option_stg to Snowflake Target fdb_core_asset_cap_detail"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

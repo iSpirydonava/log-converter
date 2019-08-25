@@ -1,0 +1,34 @@
+
+    /* ----------------- fdb_txn_bill_other_charge_daily ----------------- */
+    /* ----------------- US.ANA01162.CMD ----------------- */
+
+    insert_job: US.ANA01162.CMD   job_type: CMD
+    box_name: US.ANA01025.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillOthrChrgDailyMasterStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfTxnBillOthrChrgDailyMasterStg to load data from Spin Source other_charge_daily to Snowflake Stage other_charge_daily"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01963.CMD ----------------- */
+
+    insert_job: US.ANA01962.CMD   job_type: CMD
+    box_name: US.ANA01025.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillOthrChrgDaily"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01162.CMD)
+    description: "Triggers job jSfTxnBillOthrChrgDaily to load data from Snowflake Source other_charge_daily to Snowflake Stage other_charge_daily"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

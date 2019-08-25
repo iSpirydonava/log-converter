@@ -1,0 +1,158 @@
+    insert_job: US.ANA01002.CMD   job_type: CMD
+    box_name: US.ANA01001.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfWorkflowStart"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfWorkflowStart to start workflow for project BIANALYTICS01"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+
+    insert_job: US.ANA01003.CMD   job_type: CMD
+    box_name: US.ANA01001.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfWorkflowEnd"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfWorkflowEnd to end workflow for project BIANALYTICS01"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    insert_job: US.ANA01003.CMD   job_type: CMD
+    box_name: US.ANA01002.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCustomWorkflowStart"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfCustomWorkflowStart to start workflow for project BIANALYTICS01-Custom"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    insert_job: US.ANA01004.CMD   job_type: CMD
+    box_name: US.ANA01002.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCustomWorkflowEnd"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfWorkflowEnd to end workflow for project BIANALYTICS01-Custom"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+
+    insert_job: US.ANA01005.CMD   job_type: CMD
+    box_name: US.ANA01004.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfLeaseWorkflowStart"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfLeaseWorkflowStart to start workflow for project BIANALYTICS01-Lease_projections"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    insert_job: US.ANA01006.CMD   job_type: CMD
+    box_name: US.ANA01004.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfLeaseWorkflowEnd"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfLeaseWorkflowEnd to end workflow for project BIANALYTICS01-Lease_projections"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+
+    insert_job: US.ANA01007.CMD   job_type: CMD
+    box_name: US.ANA01005.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfBillingWorkflowStart"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfBillingWorkflowStart to start workflow for project BIANALYTICS01-Billing"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+
+    insert_job: US.ANA01008.CMD   job_type: CMD
+    box_name: US.ANA01005.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfBillingWorkflowEnd"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfBillingWorkflowEnd to end workflow for project BIANALYTICS01-Billing"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    insert_job: US.ANA01009.CMD   job_type: CMD
+    box_name: US.ANA01006.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfRentalBillingWorkflowStart"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfRentalBillingWorkflowStart to start workflow for project BIANALYTICS01-RentalBilling"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    insert_job: US.ANA01010.CMD   job_type: CMD
+    box_name: US.ANA01006.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfRentalBillingWorkflowEnd"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfRentalBillingWorkflowEnd to start workflow for project BIANALYTICS01-RentalBilling"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+
+    insert_job: US.ANA01010.CMD   job_type: CMD
+    box_name: US.ANA01001.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jUpdateLogs"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jUpdateLogs to create the entry in the Load Date Table (get and put data from Prod)"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

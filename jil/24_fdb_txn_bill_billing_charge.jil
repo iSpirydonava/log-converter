@@ -1,0 +1,141 @@
+
+    /* ---------------- fdb_txn_bill_billing_charge ----------*/
+    /* ----------------- US.ANA01422.CMD ----------------- */
+
+    insert_job: US.ANA01422.CMD   job_type: CMD
+    box_name: US.ANA01024.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillChrgLeaseBillableCdcInsStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    /*     condition: s(US.ANA01421.CMD) - billing workflow start */
+    description: "Triggers job jSfTxnBillChrgLeaseBillableCdcInsStg to load data from Spin Source Lease Charge to Snowflake Stage Billing Charge Stage"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01423.CMD ----------------- */
+
+    insert_job: US.ANA01423.CMD   job_type: CMD
+    box_name: US.ANA01024.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillChrgOthrBillableCdcInsStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01422.CMD)
+    description: "Triggers job jSfTxnBillChrgOthrBillableCdcInsStg to load data from Spin Source Other Charge to Snowflake Stage Billing Charge Stage"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01424.CMD ----------------- */
+
+    insert_job: US.ANA01424.CMD   job_type: CMD
+    box_name: US.ANA01024.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillChrgOthrNonBillableCdcInsStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01423.CMD)
+    description: "Triggers job jSfTxnBillChrgOthrNonBillableCdcInsStg to load data from Spin Source Reference Document to Snowflake Stage Billing Charge Stage"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01425.CMD ----------------- */
+
+    insert_job: US.ANA01425.CMD   job_type: CMD
+    box_name: US.ANA01024.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillChrgMaintNonBillableInsUpdStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01424.CMD)
+    description: "Triggers job jSfTxnBillChrgMaintNonBillableInsUpdStg to load data from Spin Source Maintenance Order Detail to Snowflake Stage Billing Charge Stage"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01426.CMD ----------------- */
+
+    insert_job: US.ANA01426.CMD   job_type: CMD
+    box_name: US.ANA01024.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillBlngChrgLeaseBill"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01425.CMD)
+    description: "Triggers job jSfTxnBillBlngChrgLeaseBill to load data from Spin Source to Snowflake Target Billing Charge"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01427.CMD ----------------- */
+
+    insert_job: US.ANA01427.CMD   job_type: CMD
+    box_name: US.ANA01024.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillBlngChrgOthrBill"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01426.CMD)
+    description: "Triggers job jSfTxnBillBlngChrgOthrBill to load data from Spin Source to Snowflake Target Billing Charge"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+
+    /* ----------------- US.ANA01428.CMD ----------------- */
+
+    insert_job: US.ANA01428.CMD   job_type: CMD
+    box_name: US.ANA01024.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillBlngChrgOthrNonBill"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01427.CMD)
+    description: "Triggers job jSfTxnBillBlngChrgOthrNonBill to load data from Spin Source to Snowflake Target Billing Charge"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+
+    /* ----------------- US.ANA01429.CMD ----------------- */
+
+    insert_job: US.ANA01429.CMD   job_type: CMD
+    box_name: US.ANA01024.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillBlngChrgMaintNonBill"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01428.CMD)
+    description: "Triggers job jSfTxnBillBlngChrgMaintNonBill to load data from Spin Source to Snowflake Target Billing Charge"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+

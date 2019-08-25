@@ -1,0 +1,19 @@
+
+    /* ----------------- US.ANA01731.CMD ----------------- */
+
+    insert_job: US.ANA01731.CMD   job_type: CMD
+    box_name: US.ANA01042.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreAssetOdmtrMnthlyVrnc"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 1
+    run_calendar: 1st_of_Month
+    start_times: "05:00"
+    description: "This job will lod monthly odometer variance table"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+

@@ -1,0 +1,37 @@
+
+    /* ----------------- fdb_core_user_pref ----------------- */
+    /* ----------------- US.ANA01417.CMD ----------------- */
+
+    insert_job: US.ANA01417.CMD   job_type: CMD
+    box_name: US.ANA01021.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreUserPrefILStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    /* should be 1*/
+    /* days_of_week: all
+    start_mins: 05,35 */
+    description: "Triggers job jFuelUserPrefIL to load data from Spin Source user preference Snowflake Stg user_pref every half an hour"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01418.CMD ----------------- */
+
+    insert_job: US.ANA01418.CMD   job_type: CMD
+    box_name: US.ANA01021.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreUserPrefIL"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01417.CMD)
+    description: "Triggers job jSfCoreUserPrefIL to load data from Spin Source user pref to SnowFlake Target user_pref every half an hour"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

@@ -1,0 +1,34 @@
+
+    /* ----------------- US.ANA01298.CMD ----------------- */
+
+    insert_job: US.ANA01298.CMD   job_type: CMD
+    box_name: US.ANA01048.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillNwUntNtcAdjustmntInfStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfTxnBillNwUntNtcAdjustmntInfStg to load data from Spin Source new_unit_notice_adjustment to Snowflake Stage new_unit_notice_adjustment_info"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+
+        /* ----------------- US.ANA01306.CMD ----------------- */
+
+    insert_job: US.ANA01306.CMD   job_type: CMD
+    box_name: US.ANA01048.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillNwUntNtcAdjustmntInf"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01298.CMMD)
+    description: "Triggers job jSfTxnBillNwUntNtcAdjustmntInf to load data from Snowflake Source new_unit_notice_adjustment_info_stg to Snowflake Stage new_unit_notice_adjustment_info"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

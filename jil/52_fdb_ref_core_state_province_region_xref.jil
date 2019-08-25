@@ -1,0 +1,35 @@
+
+    /* ----------------- fdb_ref_core_state_province_region_xref ----------------- */
+    /* ----------------- US.ANA01233.CMD ----------------- */
+
+    insert_job: US.ANA01233.CMD   job_type: CMD
+    box_name: US.ANA01052.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreRefStPrvRgnXrfStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfRefCoreRefStPrvRgnXrfStg to load data from Spin Source state_province_region_xref to Snowflake Stage ref_state_province_region_xref"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+
+    /* ----------------- US.ANA01275.CMD ----------------- */
+
+    insert_job: US.ANA01275.CMD   job_type: CMD
+    box_name: US.ANA01052.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreRefStPrvRgnXrf"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01233.CMD)
+    description: "Triggers job jSfRefCoreRefStPrvRgnXrf to load data from Cassandra Source ref_state_province_region_xref_stg to Snowflake Target ref_state_province_region_xref"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

@@ -1,0 +1,34 @@
+
+    /* ---------------- fdb_core_internal_contact_info ----------*/
+    /* ----------------- US.ANA01040.CMD ----------------- */
+
+    insert_job: US.ANA01040.CMD   job_type: CMD
+    box_name: US.ANA01016.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreIntrnlCntctInfStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfCoreIntrnlCntctInfStg to load data from Spin Source rnal_contact to Snowflake Stage internal_contact_info"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01096.CMD ----------------- */
+
+    insert_job: US.ANA01096.CMD   job_type: CMD
+    box_name: US.ANA01016.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreIntrnlCntctInf"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01040.CMD)
+    description: "Triggers job jSfCoreIntrnlCntctInf to load data from Spin Source internal_contact_info_stg to Snowflake Target internal_contact_info"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

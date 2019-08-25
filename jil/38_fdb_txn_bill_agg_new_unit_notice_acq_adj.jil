@@ -1,0 +1,34 @@
+
+    /* ---------------- fdb_txn_bill_agg_new_unit_notice_acq_adj ----------*/
+    /* ----------------- US.ANA01511.CMD ----------------- */
+
+    insert_job: US.ANA01511.CMD   job_type: CMD
+    box_name: US.ANA01038.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillAggNewUnitNoticeAcqAdjStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfTxnBillAggNewUnitNoticeAcqAdjStg to load data from Spin Source to Snowflake Stage agg_new_unit_notice_acq_adj"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01512.CMD ----------------- */
+
+    insert_job: US.ANA01512.CMD   job_type: CMD
+    box_name: US.ANA01038.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillAggNewUnitNoticeAcqAdj"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01511.CMD)
+    description: "Triggers job jSfTxnBillAggNewUnitNoticeAcqAdj to load data from Spin Stg to Snowflake Target agg_new_unit_notice_acq_adj"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

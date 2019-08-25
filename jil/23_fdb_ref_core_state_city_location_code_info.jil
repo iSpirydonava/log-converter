@@ -1,0 +1,52 @@
+    /* ---------------- fdb_ref_core_state_city_location_code_info ----------*/
+    /* ----------------- US.ANA01398.CMD ----------------- */
+
+    insert_job: US.ANA01398.CMD   job_type: CMD
+    box_name: US.ANA01023.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreStateCtyLocCdInfStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfRefCoreStateCtyLocCdInfStg to load data from Spin Source Ref_StateCtyLocCd to Snowflake Stage Ref_State_City_location_code_info"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01405.CMD ----------------- */
+
+    insert_job: US.ANA01405.CMD   job_type: CMD
+    box_name: US.ANA01023.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfDelRefCoreCtyLctnCd"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01398.CMD)
+    description: "Triggers job jSfDelRefCoreCtyLctnCd to delete data in Snowflake Ref_State_City_location_code_info from Spin CDC tables"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01399.CMD ----------------- */
+
+    insert_job: US.ANA01399.CMD   job_type: CMD
+    box_name: US.ANA01023.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreStateCtyLocCdInf"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01405.CMD)
+    description: "Triggers job jSfRefCoreStateCtyLocCdInf to load data from Spin Source Ref_StateCtyLocCd to Snowflake Target Ref_StateCtyLocCd"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+

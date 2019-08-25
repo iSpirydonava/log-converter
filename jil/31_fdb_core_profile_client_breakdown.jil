@@ -1,0 +1,34 @@
+
+    /* ----------------- fdb_core_profile_client_breakdown ----------------- */
+    /* ----------------- US.ANA01034.CMD ----------------- */
+
+    insert_job: US.ANA01034.CMD   job_type: CMD
+    box_name: US.ANA01031.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCorePrfCliBkdwnStg"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    description: "Triggers job jSfCorePrfCliBkdwnStg to load data from Spin Source profile to Snowflake Stage profile_client_breakdown"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA
+
+    /* ----------------- US.ANA01092.CMD ----------------- */
+
+    insert_job: US.ANA01092.CMD   job_type: CMD
+    box_name: US.ANA01031.BOX
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfCorePrfCliBkdwn"
+    machine: Virtual_DEV_Linux
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01034.CMD)
+    description: "Triggers job jSfCorePrfCliBkdwn to load data from Cassandra Source profile_client_breakdown_stg to Snowflake Target fdb_core_profile_client_breakdown"
+    std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+    alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+    application: ANA

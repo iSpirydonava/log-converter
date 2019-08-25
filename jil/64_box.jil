@@ -1,0 +1,26 @@
+
+
+ insert_job: US.ANA01064.BOX    job_type: box
+ owner: autosys
+ permission: gx,ge,wx
+ condition: s(US.ANA01001.BOX)
+ description: "Trigger jTnRFdbOtherChargeInfo"
+ alarm_if_fail: 1
+ application: ANA
+
+
+ /* ----------------- US.ANA00035.CMD ----------------- */
+
+ insert_job: US.ANA01803.CMD   job_type: CMD
+ box_name: US.ANA01064.BOX
+ command: $GEN_BIN/run_Talend_job.ksh -j "jTnRFdbOtherChargeInfo"
+ machine: Virtual_DEV_Linux
+ owner: autosys
+ permission: gx,ge,wx
+ date_conditions: 0
+ description: "Triggers job jFuelClientBreakdownSeed to load data from Spin Source cliwnt_breakdown to Cassandra Target client_breakdown"
+ std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+ std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+ alarm_if_fail: 1
+    profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+ application: ANA
