@@ -1,0 +1,68 @@
+insert_job,job_type,owner,permission,date_conditions,start_times,condition,description,alarm_if_fail,application
+US.ANA01000.BOX, BOX,autosys,gx;ge;wx,1,"06-00",null,"Load Start Job",1,ANA
+US.ANA01001.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01000.BOX),"All ETL jobs from BIANALYTICS04 project for Snowflake tables",1,ANA
+US.ANA01002.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01013.BOX),"All ETL jobs from BIANALYTICS04-Custom project for Snowflake tables",1,ANA
+US.ANA01003.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"Shared ETL jobs from asset_info Snowflake tables",1,ANA
+US.ANA01004.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01010.BOX),"All ETL jobs from BIANALYTICS04-Lease_projections project for Snowflake tables",1,ANA
+US.ANA01005.BOX, BOX,autosys,gx;ge;wx,1,"14-00",null,"All ETL jobs from BIANALYTICS04-Billing project for Snowflake tables",1,ANA
+US.ANA01006.BOX, BOX,autosys,gx;ge;wx,y,"07-00",null,"All ETL jobs from BIANALYTICS04-RentalBilling project for Snowflake tables",1,ANA
+US.ANA01009.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01066.BOX),"Box to trigger automatic data validation tool for Stage and Final tables",1,ANA
+US.ANA01010.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01002.BOX),"ETL Jobs for Snowflake table core.asset_custom_field",1,ANA
+US.ANA01011.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table core.asset_info",1,ANA
+US.ANA01012.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01011.BOX),"ETL Jobs for Snowflake table core.asset_info_ext1",1,ANA
+US.ANA01013.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01012.BOX),"ETL Jobs for Snowflake table core.asset_info_ext2",1,ANA
+US.ANA01014.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01002.BOX)& s(US.ANA01013.BOX),"ETL Jobs for Snowflake table core.client_asset_header",1,ANA
+US.ANA01015.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table core.client_breakdown",1,ANA
+US.ANA01016.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table core.internal_contact_info",1,ANA
+US.ANA01017.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table core.person",1,ANA
+US.ANA01018.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01002.BOX),"ETL Jobs for Snowflake table core.person_custom_field",1,ANA
+US.ANA01019.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table core.ref_date_range",1,ANA
+US.ANA01020.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table core.service_card",1,ANA
+US.ANA01021.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table core.user_pref",1,ANA
+US.ANA01022.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table ref_core.ref_lessor",1,ANA
+US.ANA01023.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table ref_core.ref_state_city_location_code_info",1,ANA
+US.ANA01024.BOX, BOX,autosys,gx;ge;wx,null,null,s(US.ANA01005.BOX),"Billing Monthly Jobs- ETL Jobs for Snowflake table txn_bill.billing_charge",1,ANA
+US.ANA01025.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table txn_bill.other_charge_daily",1,ANA
+US.ANA01026.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01031.BOX),"ETL Jobs for Snowflake table txn_inv.asset_factless_fact_info",1,ANA
+US.ANA01027.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table core.ref_charge_code_report_grouping",1,ANA
+US.ANA01028.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01038.BOX),"ETL Jobs for Snowflake table core.asset_info_ext3",1,ANA
+US.ANA01029.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01039.BOX),"ETL Jobs for Snowflake table ref_core.ref_county_province_location_code",1,ANA
+US.ANA01030.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table ref_core.ref_bill_charge_code",1,ANA
+US.ANA01031.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table core.profile_client_breakdown",1,ANA
+US.ANA01032.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table txn_inv.agg_person_asset",1,ANA
+US.ANA01033.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table txn_inv.agg_person_asset",1,ANA
+US.ANA01034.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01040.BOX),"ETL Jobs for Snowflake table ref_core.ref_tag_type_code",1,ANA
+US.ANA01035.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01040.BOX),"ETL Jobs for Snowflake table core.person_asset_history",1,ANA
+US.ANA01036.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table txn_bill.new_unit_notice_info",1,ANA
+US.ANA01037.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01047.BOX),"ETL Jobs for Snowflake table txn_bill.new_unit_notice_payment_info",1,ANA
+US.ANA01038.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table ref_core.ref_state_city_location_code_info",1,ANA
+US.ANA01039.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table ref_core.ref_monthly_billing_cutoff_date",1,ANA
+US.ANA01040.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table ref_core.ref_client",1,ANA
+US.ANA01041.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table ref_core.ref_charge_reason_code_xref",1,ANA
+US.ANA01042.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01024.BOX),"ETL Jobs for Snowflake table core.asset_odom_mnthly_vrnc",1,ANA
+US.ANA01043.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table core.asset_odom_rdng",1,ANA
+US.ANA01044.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table core.asset_odometer_estimate",1,ANA
+US.ANA01045.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table ref_core.ref_odom_rdng_src_cd",1,ANA
+US.ANA01046.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01023.BOX),"ETL Jobs for Snowflake table ref_core.ref_rntl_cmpny_veh_cls_cd",1,ANA
+US.ANA01047.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01011.BOX),"ETL Jobs for Snowflake table txn_bill.ats_detail",1,ANA
+US.ANA01048.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01038.BOX),"ETL Jobs for Snowflake table txn_bill.new_unit_notice_adjustment_info",1,ANA
+US.ANA01049.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table txn_bill.new_unit_notice_aquisition_info",1,ANA
+US.ANA01050.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01040.BOX),"ETL Jobs for Snowflake table ref_core.ref_contract_code",1,ANA
+US.ANA01051.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01027.BOX),"ETL Jobs for Snowflake table ref_core.ref_state_province_abbreviation",1,ANA
+US.ANA01052.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01027.BOX),"ETL Jobs for Snowflake table ref_core.ref_state_province_region_xref",1,ANA
+US.ANA01053.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01060.BOX),"ETL Jobs for Snowflake table txn_bill.loan_prin_hist_tran",1,ANA
+US.ANA01054.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01044.BOX),"ETL Jobs for Snowflake table txn_bill.paid_ticket_info",1,ANA
+US.ANA01055.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01044.BOX),"ETL Jobs for Snowflake table txn_bill.sold_unit_notice_info",1,ANA
+US.ANA01056.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01004.BOX),"ETL Jobs for Snowflake table core.asset_lease_schedule_detail",1,ANA
+US.ANA01057.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table ref_core.ref_inventory_status_code",1,ANA
+US.ANA01058.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table ref_core.ref_product_class_code",1,ANA
+US.ANA01059.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01027.BOX),"ETL Jobs for Snowflake table ref_core.ref_ata_code",1,ANA
+US.ANA01060.BOX, box,autosys,gx;ge;wx,null,null,s(US.ANA01006.BOX),"Rental Billing Monthly Jobs- ETL Jobs for Snowflake table txn_bill.billing_charge",y,ANA
+US.ANA01061.BOX, box,autosys,gx;ge;wx,null,null,s(US.ANA01051.CMD),"Trigger jSfPahSpinPsnId",1,ANA
+US.ANA01062.BOX, box,autosys,gx;ge;wx,null,null,s(US.ANA01001.BOX),"Trigger jSfCoreClientBreakdownSeedStg",1,ANA
+US.ANA01063.BOX, box,autosys,gx;ge;wx,null,null,s(US.ANA01064.BOX),"Trigger jSfRefCoreRefDateRangeLastEst",1,ANA
+US.ANA01064.BOX, box,autosys,gx;ge;wx,null,null,s(US.ANA01001.BOX),"Trigger jTnRFdbOtherChargeInfo",1,ANA
+US.ANA01065.BOX, box,autosys,gx;ge;wx,null,null,s(US.ANA01001.BOX),"Trigger jSfTxnTnROtherChargeInfo",1,ANA
+US.ANA01066.BOX, box,autosys,gx;ge;wx,null,null,s(US.ANA01056.BOX),"Trigger jSfGenDelete",1,ANA
+US.ANA01067.BOX, box,autosys,gx;ge;wx,null,null,s(US.ANA01013.BOX),"Trigger jSfPahSpinPsnId",1,ANA
+US.ANA01067.BOX, BOX,autosys,gx;ge;wx,0,null,s(US.ANA01001.BOX),"ETL Jobs for Snowflake table ref_core.ref_product_class_code",1,ANA

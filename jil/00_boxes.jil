@@ -54,31 +54,6 @@ application: ANA
   alarm_if_fail: 1
   application: ANA
 
-  /* ----------------- US.ANA01005.BOX ----------------- */
-
-  insert_job: US.ANA01005.BOX   job_type: BOX
-  owner: autosys
-  permission: gx,ge,wx
-  date_conditions: 1
-  run_calendar: Sun_of_Billing
-  start_times: "14:00"
-  description: "All ETL jobs from BIANALYTICS04-Billing project for Snowflake tables"
-  alarm_if_fail: 1
-  application: ANA
-
-    /* ----------------- US.ANA01006.BOX ----------------- */
-
-  insert_job: US.ANA01006.BOX   job_type: BOX
-  owner: autosys
-  permission: gx,ge,wx
-  date_conditions: y
-  start_times: "07:00"
-  run_calendar: 1st_of_Month
-  description: "All ETL jobs from BIANALYTICS04-RentalBilling project for Snowflake tables"
-  alarm_if_fail: 1
-  application: ANA
-
-
 
  /* ----------------- US.ANA01010.BOX ----------------- */
 
@@ -654,7 +629,7 @@ send_notification: n
 
 /* ----------------- US.ANA01061.BOX ----------------- */
 
-insert_job: US.ANA01061.BOX    job_type: box
+insert_job: US.ANA01067.BOX    job_type: box
 owner: autosys
 permission: gx,ge,wx
 condition: s(US.ANA01013.BOX)

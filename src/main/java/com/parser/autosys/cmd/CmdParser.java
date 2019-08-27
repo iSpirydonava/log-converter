@@ -1,18 +1,19 @@
 package com.parser.autosys.cmd;
 
-import com.parser.autosys.Parser;
-import lombok.val;
-
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-import static com.parser.autosys.cmd.CmdProperty.JOB_TYPE_CMD;
+import static com.parser.autosys.Parser.getJobNameIndexList;
 
 
-public class CmdParser extends Parser {
+public class CmdParser  {
 
-    private List<CmdProperty> getCmd(List<String> str, List<Integer> indexList) {
+
+    public List<CmdProperty> getCmd(List<String> str) {
         List<CmdProperty> cmdList = new ArrayList<>();
+        List<Integer> indexList= new ArrayList<>(getJobNameIndexList(str).keySet());
+        Collections.sort(indexList);
         for (int x = 0; x < indexList.size(); x++) {
             List<String> y;
 
@@ -23,16 +24,5 @@ public class CmdParser extends Parser {
         }
         return cmdList;
     }
-
-
-    public List<CmdProperty> getCmdList(List<String> str) {
-        val values = filterValues(str);
-        val indexList = getJobNameIndexList(values, JOB_TYPE_CMD);
-        val cmd = getCmd(values, indexList);
-
-        return cmd;
-    }
-
-
 
 }

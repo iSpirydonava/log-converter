@@ -3,10 +3,7 @@ package com.parser.autosys;
 import lombok.Getter;
 import lombok.val;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Getter
@@ -65,18 +62,15 @@ public class Parser {
             if (x.contains(JOB_NAME)) {
                 String[] jobType = x.split(JOB_TYPE_NAME + ":");
                 val value = jobType[1];
-                indexList.put(str.indexOf(x), value);
+                indexList.put(str.indexOf(x), value.toUpperCase());
             }
         });
-    //    checkIndexes(indexList, str);
         return indexList;
     }
 
-    private static void checkIndexes(List<Integer> index, List<String> str) {
-        if (index.size() != 0 && index.size() != index.stream().distinct().count()) {
-            val v = index.stream().distinct().collect(Collectors.toList());
-            v.forEach(x -> System.out.println("CMD with the same names exits: " + str.get(x)));
-        }
-    }
 
+    public static List<String> getJobList(List<String> str) {
+        return filterValues(str);
+
+    }
 }

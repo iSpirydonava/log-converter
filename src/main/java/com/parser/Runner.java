@@ -1,6 +1,7 @@
 package com.parser;
 
 
+import com.parser.autosys.JobHelper;
 import com.parser.autosys.JoinHelper;
 import com.parser.autosys.box.BoxFormatting;
 import com.parser.autosys.box.BoxParser;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.parser.autosys.Parser.*;
 import static com.parser.autosys.SortImpl.sortBoxByNumber;
 import static com.parser.autosys.SortImpl.sortCmdByNumber;
 
@@ -29,6 +31,7 @@ public class Runner {
     private static LogParser logParser = new LogParser();
     private static CmdParser cmdParser = new CmdParser();
     private static BoxParser boxParser = new BoxParser();
+    private static JobHelper jobHelper = new JobHelper();
     private static BoxFormatting boxFormatting = new BoxFormatting();
     private static CmdFormating cmdFormating = new CmdFormating();
     private static JoinHelper joinHelper = new JoinHelper();
@@ -41,12 +44,19 @@ public class Runner {
 
         List<CmdProperty> cmdList = new ArrayList<>();
         List<BoxProperty> boxList = new ArrayList<>();
+        List<String> unitList = new ArrayList<>();
 
         z.forEach(x -> {
             val y = fileReader.readLinesFromResourceFile(x);
-            cmdList.addAll(cmdParser.getCmdList(y));
-            boxList.addAll(boxParser.getBoxList(y));
+            unitList.addAll(getJobList(y));
         });
+
+
+        val indexes = getJobNameIndexList(unitList);
+        jobHelper.splitByJobType(unitList, indexes);
+        cmdList.addAll(cmdParser.getCmd(jobHelper.getCmdStringList()));
+        boxList.addAll(boxParser.getBoxList(jobHelper.getBoxStringList()));
+
 
         val sortCmdList = sortCmdByNumber(cmdList);
         val sortBoxList = sortBoxByNumber(boxList);
