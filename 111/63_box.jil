@@ -1,0 +1,43 @@
+ /* ----------------- US.ANA01063.BOX ----------------- */
+
+ insert_job: US.ANA01063.BOX    job_type: box
+ owner: autosys
+ permission: gx,ge,wx
+ condition: s(US.ANA01064.BOX)
+ description: "Trigger jSfRefCoreRefDateRangeLastEst"
+ alarm_if_fail: 1
+ application: ANA
+
+
+ /* ----------------- US.ANA00035.CMD ----------------- */
+
+ insert_job: US.ANA01802.CMD   job_type: CMD
+ box_name: US.ANA01063.BOX
+ command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreRefDateRangeLastEstStg"
+ machine: Virtual_DEV_Linux
+ owner: autosys
+ permission: gx,ge,wx
+ date_conditions: 0
+ description: "Triggers job jSfRefCoreRefDateRangeLastEstStg to load data from Spin Source client_breakdown to Snowflake Target client_breakdown"
+ std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+ std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+ alarm_if_fail: 1
+ profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+ application: ANA
+
+  /* ----------------- US.ANA00035.CMD ----------------- */
+
+  insert_job: US.ANA01806.CMD   job_type: CMD
+  box_name: US.ANA01063.BOX
+  command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreRefDateRangeLastEst"
+  machine: Virtual_DEV_Linux
+  owner: autosys
+  permission: gx,ge,wx
+  date_conditions: 0
+  condition: s(US.ANA01802.CMD)
+  description: "Triggers job jSfRefCoreRefDateRangeLastEst to load data from Spin Source client_breakdown to Snowflake Target client_breakdown"
+  std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+  std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+  alarm_if_fail: 1
+  profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+  application: ANA

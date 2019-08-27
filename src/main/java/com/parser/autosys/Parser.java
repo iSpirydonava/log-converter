@@ -29,15 +29,18 @@ public class Parser {
     public final static String ALARM_IF_FAIL_NAME = "alarm_if_fail";
     public final static String PROFILE_NAME = "profile";
     public final static String APPLICATION_NAME = "application";
+    public final static String START_TIME_NAME = "start_times";
 
 
     public static Map<String, String> splitPropertyStringsByDoublePoints(List<String> str, String job_type) {
         Map<String, String> map = new HashMap<>();
         str.forEach(x -> {
-            val y = x.split(":");
+            val y = (x.contains(START_TIME_NAME) || x.contains(DESCRIPTION_NAME))
+                    ? x.replace(":", "-").replaceFirst("-", ":").split(":")
+                    : x.split(":");
             if (y.length > 2) {
                 map.put(y[0].trim(), y[1].replace(JOB_TYPE_NAME, "").trim());
-                map.put(JOB_TYPE_NAME, job_type);
+                map.put(JOB_TYPE_NAME, y[2]);
             } else {
                 if (y.length == 1) {
                     System.out.println("ERROR " + y[0]);
@@ -56,13 +59,24 @@ public class Parser {
                 .collect(Collectors.toList());
     }
 
-    public static List<Integer> getJobNameIndexList(List<String> str, String job_type) {
-        List<Integer> indexList = new ArrayList<>();
-
+    public static Map<Integer, String> getJobNameIndexList(List<String> str) {
+        Map<Integer, String> indexList = new HashMap<>();
         str.forEach(x -> {
-            if (x.contains(JOB_NAME) && x.contains(job_type)) indexList.add(str.indexOf(x));
+            if (x.contains(JOB_NAME)) {
+                String[] jobType = x.split(JOB_TYPE_NAME + ":");
+                val value = jobType[1];
+                indexList.put(str.indexOf(x), value);
+            }
         });
+    //    checkIndexes(indexList, str);
         return indexList;
+    }
+
+    private static void checkIndexes(List<Integer> index, List<String> str) {
+        if (index.size() != 0 && index.size() != index.stream().distinct().count()) {
+            val v = index.stream().distinct().collect(Collectors.toList());
+            v.forEach(x -> System.out.println("CMD with the same names exits: " + str.get(x)));
+        }
     }
 
 }

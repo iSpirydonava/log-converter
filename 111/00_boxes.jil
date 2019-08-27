@@ -10,16 +10,16 @@ description: "Load Start Job"
 alarm_if_fail: 1
 application: ANA
 
- /* ----------------- US.ANA01001.BOX ----------------- */
+  /* ----------------- US.ANA01001.BOX ----------------- */
 
- insert_job: US.ANA01001.BOX   job_type: BOX
- owner: autosys
- permission: gx,ge,wx
- date_conditions: 0
- condition: s(US.ANA01000.BOX)
- description: "All ETL jobs from BIANALYTICS01 project for Snowflake tables"
- alarm_if_fail: 1
- application: ANA
+  insert_job: US.ANA01001.BOX   job_type: BOX
+  owner: autosys
+  permission: gx,ge,wx
+  date_conditions: 0
+  condition: s(US.ANA01000.BOX)
+  description: "All ETL jobs from BIANALYTICS04 project for Snowflake tables"
+  alarm_if_fail: 1
+  application: ANA
 
   /* ----------------- US.ANA01002.BOX ----------------- */
 
@@ -28,7 +28,7 @@ application: ANA
   permission: gx,ge,wx
   date_conditions: 0
   condition: s(US.ANA01013.BOX)
-  description: "All ETL jobs from BIANALYTICS01-Custom project for Snowflake tables"
+  description: "All ETL jobs from BIANALYTICS04-Custom project for Snowflake tables"
   alarm_if_fail: 1
   application: ANA
 
@@ -43,36 +43,38 @@ application: ANA
  alarm_if_fail: 1
  application: ANA
 
-  /* ----------------- US.ANA01001.BOX ----------------- */
+  /* ----------------- US.ANA01004.BOX ----------------- */
 
   insert_job: US.ANA01004.BOX   job_type: BOX
   owner: autosys
   permission: gx,ge,wx
   date_conditions: 0
   condition: s(US.ANA01010.BOX)
-  description: "All ETL jobs from BIANALYTICS01-Lease_projections project for Snowflake tables"
+  description: "All ETL jobs from BIANALYTICS04-Lease_projections project for Snowflake tables"
   alarm_if_fail: 1
   application: ANA
 
-  /* ----------------- US.ANA01001.BOX ----------------- */
+  /* ----------------- US.ANA01005.BOX ----------------- */
 
   insert_job: US.ANA01005.BOX   job_type: BOX
   owner: autosys
   permission: gx,ge,wx
   date_conditions: 1
   run_calendar: Sun_of_Billing
-  start_times: "22:00"
-  description: "All ETL jobs from BIANALYTICS01-Billing project for Snowflake tables"
+  start_times: "14:00"
+  description: "All ETL jobs from BIANALYTICS04-Billing project for Snowflake tables"
   alarm_if_fail: 1
   application: ANA
 
-    /* ----------------- US.ANA01001.BOX ----------------- */
+    /* ----------------- US.ANA01006.BOX ----------------- */
 
   insert_job: US.ANA01006.BOX   job_type: BOX
   owner: autosys
   permission: gx,ge,wx
-  date_conditions: 0
-  description: "All ETL jobs from BIANALYTICS01-RentalBilling project for Snowflake tables"
+  date_conditions: y
+  start_times: "07:00"
+  run_calendar: 1st_of_Month
+  description: "All ETL jobs from BIANALYTICS04-RentalBilling project for Snowflake tables"
   alarm_if_fail: 1
   application: ANA
 
@@ -647,9 +649,6 @@ application: ANA
 permission: gx,ge,wx
 max_run_alarm: 0
 alarm_if_fail: y
-date_conditions: y
-start_times: "07:00"
-run_calendar: 1st_of_Month
 send_notification: n
 
 

@@ -1,4 +1,3 @@
-
 /* ----------------- US.ANA01061.BOX ----------------- */
 
 insert_job: US.ANA01061.BOX    job_type: box
@@ -17,7 +16,7 @@ application: ANA
 
     insert_job: US.ANA01800.CMD   job_type: CMD
     box_name: US.ANA01061.BOX
-    command: $GEN_BIN/run_Talend_job.ksh -j "jSfPahSpinPsnId "
+    command: $GEN_BIN/run_Talend_job.ksh -j "jSfPahSpinPsnId"
     machine: Virtual_DEV_Linux
     owner: autosys
     permission: gx,ge,wx

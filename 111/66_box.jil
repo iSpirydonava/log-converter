@@ -1,0 +1,95 @@
+ /* ----------------- US.ANA01066.BOX ----------------- */
+
+ insert_job: US.ANA01066.BOX    job_type: box
+ owner: autosys
+ permission: gx,ge,wx
+ condition: s(US.ANA01056.BOX)
+ description: "Trigger jSfGenDelete"
+ alarm_if_fail: 1
+ application: ANA
+
+
+        /* ----------------- US.ANA01011.CMD ----------------- */
+
+        insert_job: US.ANA01011.CMD   job_type: CMD
+        box_name: US.ANA01066.BOX
+        command: $GEN_BIN/run_Talend_job.ksh -j "jSfCoreDelete"
+        machine: Virtual_DEV_Linux
+        owner: autosys
+        permission: gx,ge,wx
+        date_conditions: 0
+        description: "Triggers job jSfCoreDelete"
+        std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        alarm_if_fail: 1
+        profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+        application: ANA
+
+
+
+        /* ----------------- US.ANA01012.CMD ----------------- */
+
+        insert_job: US.ANA01012.CMD   job_type: CMD
+        box_name: US.ANA01066.BOX
+        command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreDelete"
+        machine: Virtual_DEV_Linux
+        owner: autosys
+        permission: gx,ge,wx
+        date_conditions: 0
+        description: "Triggers job jSfRefCoreDelete"
+        std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        alarm_if_fail: 1
+         profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+        application: ANA
+
+
+        /* ----------------- US.ANA01013.CMD ----------------- */
+
+        insert_job: US.ANA01013.CMD   job_type: CMD
+        box_name: US.ANA01066.BOX
+        command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillDelete"
+        machine: Virtual_DEV_Linux
+        owner: autosys
+        permission: gx,ge,wx
+        date_conditions: 0
+        description: "Triggers job jSfTxnBillDelete"
+        std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        alarm_if_fail: 1
+          profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+        application: ANA
+
+
+        /* ----------------- US.ANA01014.CMD ----------------- */
+
+        insert_job: US.ANA01014.CMD   job_type: CMD
+        box_name: US.ANA01066.BOX
+        command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnInvDelete"
+        machine: Virtual_DEV_Linux
+        owner: autosys
+        permission: gx,ge,wx
+        date_conditions: 0
+        description: "Triggers job jSfTxnInvDelete"
+        std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        alarm_if_fail: 1
+        profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+        application: ANA
+
+
+        /* ----------------- US.ANA01015.CMD ----------------- */
+
+        insert_job: US.ANA01015.CMD   job_type: CMD
+        box_name: US.ANA01066.BOX
+        command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnAcdtDelete"
+        machine: Virtual_DEV_Linux
+        owner: autosys
+        permission: gx,ge,wx
+        date_conditions: 0
+        description: "Triggers job jSfTxnAcdtDelete"
+        std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        alarm_if_fail: 1
+        profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+        application: ANA

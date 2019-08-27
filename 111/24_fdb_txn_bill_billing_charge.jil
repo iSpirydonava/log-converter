@@ -1,5 +1,22 @@
 
     /* ---------------- fdb_txn_bill_billing_charge ----------*/
+
+     /* ----------------- US.ANA01421.CMD ----------------- */
+
+     insert_job: US.ANA01421.CMD   job_type: CMD
+     box_name: US.ANA01024.BOX
+     command: $GEN_BIN/run_Talend_job.ksh -j "jSfBillingWorkflowStart"
+     machine: Virtual_DEV_Linux
+     owner: autosys
+     permission: gx,ge,wx
+     date_conditions: 0
+     description: "Triggers job jSfBillingWorkflowStart to start workflow for project BIANALYTICS04-Billing"
+     std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+     std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+     alarm_if_fail: 1
+     profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+     application: ANA
+
     /* ----------------- US.ANA01422.CMD ----------------- */
 
     insert_job: US.ANA01422.CMD   job_type: CMD
@@ -9,7 +26,7 @@
     owner: autosys
     permission: gx,ge,wx
     date_conditions: 0
-    /*     condition: s(US.ANA01421.CMD) - billing workflow start */
+    condition: s(US.ANA01421.CMD)
     description: "Triggers job jSfTxnBillChrgLeaseBillableCdcInsStg to load data from Spin Source Lease Charge to Snowflake Stage Billing Charge Stage"
     std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
     std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
@@ -138,4 +155,55 @@
     profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
     application: ANA
 
+     /* ----------------- US.ANA01430.CMD ----------------- */
 
+     insert_job: US.ANA01430.CMD   job_type: CMD
+     box_name: US.ANA01024.BOX
+     command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreRefDateRangeStg"
+     machine: Virtual_DEV_Linux
+     owner: autosys
+     permission: gx,ge,wx
+     date_conditions: 0
+     condition: s(US.ANA01429.CMD)
+     description: "Triggers job jSfRefCoreRefDateRangeStg to load data from Spin Source Delimited to Snowflake Stage ref_date_range"
+     std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+     std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+     alarm_if_fail: 1
+     profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+     application: ANA
+
+
+     /* ----------------- US.ANA01431.CMD ----------------- */
+
+     insert_job: US.ANA01431.CMD   job_type: CMD
+     box_name: US.ANA01024.BOX
+     command: $GEN_BIN/run_Talend_job.ksh -j "jSfRefCoreRefDateRange"
+     machine: Virtual_DEV_Linux
+     owner: autosys
+     permission: gx,ge,wx
+     date_conditions: 0
+     condition: s(US.ANA01430.CMD)
+     description: "Triggers job jSfRefCoreRefDateRange to load data from Spin Source ref_date_range_stg to Snowflake Target ref_date_range"
+     std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+     std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+     alarm_if_fail: 1
+     profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+     application: ANA
+
+
+     /* ----------------- US.ANA01433.CMD ----------------- */
+
+     insert_job: US.ANA01433.CMD   job_type: CMD
+     box_name: US.ANA01024.BOX
+     command: $GEN_BIN/run_Talend_job.ksh -j "jSfBillingWorkflowEnd"
+     machine: Virtual_DEV_Linux
+     owner: autosys
+     permission: gx,ge,wx
+     date_conditions: 0
+     condition: s(US.ANA01431.CMD)
+     description: "Triggers job jSfBillingWorkflowEnd to end workflow for project BIANALYTICS04-Billing"
+     std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+     std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+     alarm_if_fail: 1
+     profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+     application: ANA

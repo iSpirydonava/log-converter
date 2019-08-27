@@ -5,6 +5,8 @@ import lombok.val;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 import static com.parser.autosys.box.BoxProperty.JOB_TYPE_BOX;
 
@@ -12,29 +14,26 @@ import static com.parser.autosys.box.BoxProperty.JOB_TYPE_BOX;
 public class BoxParser extends Parser {
 
 
-    private List<BoxProperty> getBox(List<String> str, List<Integer> indexList) {
+    private List<BoxProperty> getBoxList(List<String> str, Map<Integer, String> indexList) {
         List<BoxProperty> boxList = new ArrayList<>();
-        for (int x = 0; x < indexList.size(); x++) {
-            List<String> y;
+        val indexes = new ArrayList<>(indexList.keySet());
+        for (int i = 0; i < indexes.size(); i++) {
+            if (indexList.get(indexes.get(i)).equals("BOX")) {
 
-            if (x + 1 < indexList.size())
-                y = str.subList(indexList.get(x), indexList.get(x + 1));
-            else y = str.subList(indexList.get(x), str.size());
-            boxList.add(new BoxProperty(y));
+            }
         }
+
         return boxList;
     }
 
 
-
     public List<BoxProperty> getBoxList(List<String> str) {
         val values = filterValues(str);
-        val indexList = getJobNameIndexList(values, JOB_TYPE_BOX);
-        val box = getBox(values, indexList);
+        val indexList = getJobNameIndexList(values);
+        val box = getBoxList(values, indexList);
 
         return box;
     }
-
 
 
 }

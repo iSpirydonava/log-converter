@@ -1,0 +1,43 @@
+    /* ----------------- US.ANA01067.BOX ----------------- */
+
+    insert_job: US.ANA01067.BOX   job_type: BOX
+    owner: autosys
+    permission: gx,ge,wx
+    date_conditions: 0
+    condition: s(US.ANA01001.BOX)
+    description: "ETL Jobs for Snowflake table ref_core.ref_product_class_code"
+    alarm_if_fail: 1
+    application: ANA
+
+        /* ----------------- US.ANA01519.CMD ----------------- */
+
+        insert_job: US.ANA01519.CMD   job_type: CMD
+        box_name: US.ANA01067.BOX
+        command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillLoanPrnHstTranStg"
+        machine: Virtual_DEV_Linux
+        owner: autosys
+        permission: gx,ge,wx
+        date_conditions: 0
+        description: "Triggers job to load data from Spin loan_prin_hist_tran to Snowflake. This is an independent job"
+        std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        alarm_if_fail: 1
+        profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+        application: ANA
+
+        /* ----------------- US.ANA01520.CMD ----------------- */
+
+        insert_job: US.ANA01520.CMD   job_type: CMD
+        box_name: US.ANA01067.BOX
+        command: $GEN_BIN/run_Talend_job.ksh -j "jSfTxnBillLoanPrnHstTran"
+        machine: Virtual_DEV_Linux
+        owner: autosys
+        permission: gx,ge,wx
+        date_conditions: 0
+        condition: s(US.ANA01519.CMD)
+        description: "Triggers job jSfTxnBillLoanPrnHstTran to load data from C* loan_prin_hist_tran to Snowflake Target"
+        std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
+        alarm_if_fail: 1
+        profile: "${HOME}/jobs/ana/env/ana_env_sf.sh"
+        application: ANA

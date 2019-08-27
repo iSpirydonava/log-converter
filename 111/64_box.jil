@@ -1,4 +1,4 @@
-
+ /* ----------------- US.ANA01064.BOX ----------------- */
 
  insert_job: US.ANA01064.BOX    job_type: box
  owner: autosys
@@ -18,7 +18,7 @@
  owner: autosys
  permission: gx,ge,wx
  date_conditions: 0
- description: "Triggers job jFuelClientBreakdownSeed to load data from Spin Source cliwnt_breakdown to Cassandra Target client_breakdown"
+ description: "Triggers job jFuelClientBreakdownSeed to load data from Spin Source client_breakdown to Snowflake Target client_breakdown"
  std_out_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
  std_err_file: "${ANA_LOG}/${AUTO_JOB_NAME}.log"
  alarm_if_fail: 1
